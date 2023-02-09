@@ -25,6 +25,7 @@
 - [jsonReadFull](modules.md#jsonreadfull)
 - [jsonSave](modules.md#jsonsave)
 - [jsonSaveFull](modules.md#jsonsavefull)
+- [pathResolve](modules.md#pathresolve)
 - [readLine](modules.md#readline)
 - [readLineSelect](modules.md#readlineselect)
 - [stackTrace](modules.md#stacktrace)
@@ -38,7 +39,7 @@
 
 #### Defined in
 
-[scripts/utils.ts:6](https://github.com/jonathanchowjh/ts-utils/blob/0fa3a59/scripts/utils.ts#L6)
+[scripts/utils.ts:6](https://github.com/jonathanchowjh/ts-utils/blob/a363c2a/scripts/utils.ts#L6)
 
 ## Functions
 
@@ -66,7 +67,7 @@ ErrorDefault("Error Message");
 
 #### Defined in
 
-[scripts/utils.ts:248](https://github.com/jonathanchowjh/ts-utils/blob/0fa3a59/scripts/utils.ts#L248)
+[scripts/utils.ts:249](https://github.com/jonathanchowjh/ts-utils/blob/a363c2a/scripts/utils.ts#L249)
 
 ---
 
@@ -98,7 +99,7 @@ Promise to create if not exist
 
 #### Defined in
 
-[scripts/utils.ts:384](https://github.com/jonathanchowjh/ts-utils/blob/0fa3a59/scripts/utils.ts#L384)
+[scripts/utils.ts:385](https://github.com/jonathanchowjh/ts-utils/blob/a363c2a/scripts/utils.ts#L385)
 
 ---
 
@@ -129,7 +130,7 @@ Promise to check if path exist
 
 #### Defined in
 
-[scripts/utils.ts:356](https://github.com/jonathanchowjh/ts-utils/blob/0fa3a59/scripts/utils.ts#L356)
+[scripts/utils.ts:357](https://github.com/jonathanchowjh/ts-utils/blob/a363c2a/scripts/utils.ts#L357)
 
 ---
 
@@ -160,7 +161,7 @@ List of Absolute file paths
 
 #### Defined in
 
-[scripts/utils.ts:288](https://github.com/jonathanchowjh/ts-utils/blob/0fa3a59/scripts/utils.ts#L288)
+[scripts/utils.ts:289](https://github.com/jonathanchowjh/ts-utils/blob/a363c2a/scripts/utils.ts#L289)
 
 ---
 
@@ -184,7 +185,7 @@ filePathRoot absolute path
 
 #### Defined in
 
-[scripts/utils.ts:341](https://github.com/jonathanchowjh/ts-utils/blob/0fa3a59/scripts/utils.ts#L341)
+[scripts/utils.ts:342](https://github.com/jonathanchowjh/ts-utils/blob/a363c2a/scripts/utils.ts#L342)
 
 ---
 
@@ -214,7 +215,7 @@ List of Absolute file paths
 
 #### Defined in
 
-[scripts/utils.ts:316](https://github.com/jonathanchowjh/ts-utils/blob/0fa3a59/scripts/utils.ts#L316)
+[scripts/utils.ts:317](https://github.com/jonathanchowjh/ts-utils/blob/a363c2a/scripts/utils.ts#L317)
 
 ---
 
@@ -251,7 +252,7 @@ Filtered Object
 
 #### Defined in
 
-[scripts/utils.ts:198](https://github.com/jonathanchowjh/ts-utils/blob/0fa3a59/scripts/utils.ts#L198)
+[scripts/utils.ts:199](https://github.com/jonathanchowjh/ts-utils/blob/a363c2a/scripts/utils.ts#L199)
 
 ---
 
@@ -283,7 +284,7 @@ Object or string, depending on input
 
 #### Defined in
 
-[scripts/utils.ts:120](https://github.com/jonathanchowjh/ts-utils/blob/0fa3a59/scripts/utils.ts#L120)
+[scripts/utils.ts:121](https://github.com/jonathanchowjh/ts-utils/blob/a363c2a/scripts/utils.ts#L121)
 
 ---
 
@@ -313,7 +314,7 @@ JSON Object
 
 #### Defined in
 
-[scripts/utils.ts:73](https://github.com/jonathanchowjh/ts-utils/blob/0fa3a59/scripts/utils.ts#L73)
+[scripts/utils.ts:74](https://github.com/jonathanchowjh/ts-utils/blob/a363c2a/scripts/utils.ts#L74)
 
 ---
 
@@ -350,7 +351,7 @@ Promise to finish writing to file
 
 #### Defined in
 
-[scripts/utils.ts:159](https://github.com/jonathanchowjh/ts-utils/blob/0fa3a59/scripts/utils.ts#L159)
+[scripts/utils.ts:160](https://github.com/jonathanchowjh/ts-utils/blob/a363c2a/scripts/utils.ts#L160)
 
 ---
 
@@ -381,7 +382,40 @@ Promise to finish writing to file
 
 #### Defined in
 
-[scripts/utils.ts:97](https://github.com/jonathanchowjh/ts-utils/blob/0fa3a59/scripts/utils.ts#L97)
+[scripts/utils.ts:98](https://github.com/jonathanchowjh/ts-utils/blob/a363c2a/scripts/utils.ts#L98)
+
+---
+
+### pathResolve
+
+▸ **pathResolve**(`...paths`): `string`
+
+The right-most parameter is considered {to}. Other parameters are considered an array of {from}.
+
+Starting from leftmost {from} parameter, resolves {to} to an absolute path.
+
+If {to} isn't already absolute, {from} arguments are prepended in right to left order,
+until an absolute path is found. If after using all {from} paths still no absolute path is found,
+the current working directory is used as well. The resulting path is normalized,
+and trailing slashes are removed unless the path gets resolved to the root directory.
+
+**`Throws`**
+
+if any of the arguments is not a string.
+
+#### Parameters
+
+| Name       | Type       | Description                           |
+| :--------- | :--------- | :------------------------------------ |
+| `...paths` | `string`[] | A sequence of paths or path segments. |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+node_modules/@types/node/path.d.ts:96
 
 ---
 
@@ -411,7 +445,7 @@ Object or string, depending on input
 
 #### Defined in
 
-[scripts/utils.ts:47](https://github.com/jonathanchowjh/ts-utils/blob/0fa3a59/scripts/utils.ts#L47)
+[scripts/utils.ts:48](https://github.com/jonathanchowjh/ts-utils/blob/a363c2a/scripts/utils.ts#L48)
 
 ---
 
@@ -446,7 +480,7 @@ Object or string, depending on input
 
 #### Defined in
 
-[scripts/utils.ts:21](https://github.com/jonathanchowjh/ts-utils/blob/0fa3a59/scripts/utils.ts#L21)
+[scripts/utils.ts:22](https://github.com/jonathanchowjh/ts-utils/blob/a363c2a/scripts/utils.ts#L22)
 
 ---
 
@@ -477,7 +511,7 @@ Returns stack trace of previous function
 
 #### Defined in
 
-[scripts/utils.ts:223](https://github.com/jonathanchowjh/ts-utils/blob/0fa3a59/scripts/utils.ts#L223)
+[scripts/utils.ts:224](https://github.com/jonathanchowjh/ts-utils/blob/a363c2a/scripts/utils.ts#L224)
 
 ---
 
@@ -507,4 +541,4 @@ Promise that waits for given number of milliseconds
 
 #### Defined in
 
-[scripts/utils.ts:210](https://github.com/jonathanchowjh/ts-utils/blob/0fa3a59/scripts/utils.ts#L210)
+[scripts/utils.ts:211](https://github.com/jonathanchowjh/ts-utils/blob/a363c2a/scripts/utils.ts#L211)

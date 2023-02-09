@@ -11,13 +11,20 @@ npm i ts-impl
 ### Usage
 
 ```ts
-import {
+import utils from "ts-impl";
+
+const {
   jsonSave,
   jsonRead,
   readLine,
   readLineSelect,
   ErrorDefault,
-} from "ts-impl";
+  filePathExists,
+  filePathCreate,
+  filePathRead,
+  filePathRoot,
+  path,
+} = utils;
 
 const main = async () => {
   // Example: json file save

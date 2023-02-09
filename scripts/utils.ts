@@ -4,6 +4,7 @@ import readline from "readline";
 import "dotenv/config";
 
 export const JSON_LOCATION = process.env.JSON_LOCATION || "ts-tools.json";
+export const pathResolve = path.resolve;
 
 /* eslint-disable no-case-declarations */
 /* eslint-disable no-useless-escape */

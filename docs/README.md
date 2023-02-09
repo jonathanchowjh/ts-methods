@@ -1,11 +1,11 @@
-ts-toolbox / [Exports](modules.md)
+ts-impl / [Exports](modules.md)
 
 # ts-utils
 
 ### Installation
 
 ```shell
-npm i ts-tools
+npm i ts-impl
 ```
 
 ### Usage

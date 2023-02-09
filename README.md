@@ -3,7 +3,7 @@
 ### Installation
 
 ```shell
-npm i ts-tools
+npm i ts-impl
 ```
 
 ### Usage

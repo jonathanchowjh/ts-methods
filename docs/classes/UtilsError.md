@@ -1,4 +1,4 @@
-[ts-utils](../README.md) / [Exports](../modules.md) / UtilsError
+[ts-tools](../README.md) / [Exports](../modules.md) / UtilsError
 
 # Class: UtilsError
 
@@ -66,7 +66,7 @@ Error.constructor
 
 #### Defined in
 
-[scripts/utils.ts:270](https://github.com/jonathanchowjh/ts-utils/blob/19b6d74/scripts/utils.ts#L270)
+[scripts/utils.ts:270](https://github.com/jonathanchowjh/ts-utils/blob/be30434/scripts/utils.ts#L270)
 
 ## Properties
 

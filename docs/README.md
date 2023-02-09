@@ -1,4 +1,4 @@
-ts-utils / [Exports](modules.md)
+ts-tools / [Exports](modules.md)
 
 # ts-utils
 

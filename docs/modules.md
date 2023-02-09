@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[scripts/utils.ts:6](https://github.com/jonathanchowjh/ts-utils/blob/676103e/scripts/utils.ts#L6)
+[scripts/utils.ts:6](https://github.com/jonathanchowjh/ts-utils/blob/c789e8a/scripts/utils.ts#L6)
 
 ## Functions
 
@@ -66,7 +66,7 @@ ErrorDefault("Error Message");
 
 #### Defined in
 
-[scripts/utils.ts:248](https://github.com/jonathanchowjh/ts-utils/blob/676103e/scripts/utils.ts#L248)
+[scripts/utils.ts:248](https://github.com/jonathanchowjh/ts-utils/blob/c789e8a/scripts/utils.ts#L248)
 
 ---
 
@@ -98,7 +98,7 @@ Promise to create if not exist
 
 #### Defined in
 
-[scripts/utils.ts:384](https://github.com/jonathanchowjh/ts-utils/blob/676103e/scripts/utils.ts#L384)
+[scripts/utils.ts:384](https://github.com/jonathanchowjh/ts-utils/blob/c789e8a/scripts/utils.ts#L384)
 
 ---
 
@@ -129,7 +129,7 @@ Promise to check if path exist
 
 #### Defined in
 
-[scripts/utils.ts:356](https://github.com/jonathanchowjh/ts-utils/blob/676103e/scripts/utils.ts#L356)
+[scripts/utils.ts:356](https://github.com/jonathanchowjh/ts-utils/blob/c789e8a/scripts/utils.ts#L356)
 
 ---
 
@@ -160,7 +160,7 @@ List of Absolute file paths
 
 #### Defined in
 
-[scripts/utils.ts:288](https://github.com/jonathanchowjh/ts-utils/blob/676103e/scripts/utils.ts#L288)
+[scripts/utils.ts:288](https://github.com/jonathanchowjh/ts-utils/blob/c789e8a/scripts/utils.ts#L288)
 
 ---
 
@@ -184,7 +184,7 @@ filePathRoot absolute path
 
 #### Defined in
 
-[scripts/utils.ts:341](https://github.com/jonathanchowjh/ts-utils/blob/676103e/scripts/utils.ts#L341)
+[scripts/utils.ts:341](https://github.com/jonathanchowjh/ts-utils/blob/c789e8a/scripts/utils.ts#L341)
 
 ---
 
@@ -214,7 +214,7 @@ List of Absolute file paths
 
 #### Defined in
 
-[scripts/utils.ts:316](https://github.com/jonathanchowjh/ts-utils/blob/676103e/scripts/utils.ts#L316)
+[scripts/utils.ts:316](https://github.com/jonathanchowjh/ts-utils/blob/c789e8a/scripts/utils.ts#L316)
 
 ---
 
@@ -251,7 +251,7 @@ Filtered Object
 
 #### Defined in
 
-[scripts/utils.ts:198](https://github.com/jonathanchowjh/ts-utils/blob/676103e/scripts/utils.ts#L198)
+[scripts/utils.ts:198](https://github.com/jonathanchowjh/ts-utils/blob/c789e8a/scripts/utils.ts#L198)
 
 ---
 
@@ -283,7 +283,7 @@ Object or string, depending on input
 
 #### Defined in
 
-[scripts/utils.ts:120](https://github.com/jonathanchowjh/ts-utils/blob/676103e/scripts/utils.ts#L120)
+[scripts/utils.ts:120](https://github.com/jonathanchowjh/ts-utils/blob/c789e8a/scripts/utils.ts#L120)
 
 ---
 
@@ -313,7 +313,7 @@ JSON Object
 
 #### Defined in
 
-[scripts/utils.ts:73](https://github.com/jonathanchowjh/ts-utils/blob/676103e/scripts/utils.ts#L73)
+[scripts/utils.ts:73](https://github.com/jonathanchowjh/ts-utils/blob/c789e8a/scripts/utils.ts#L73)
 
 ---
 
@@ -350,7 +350,7 @@ Promise to finish writing to file
 
 #### Defined in
 
-[scripts/utils.ts:159](https://github.com/jonathanchowjh/ts-utils/blob/676103e/scripts/utils.ts#L159)
+[scripts/utils.ts:159](https://github.com/jonathanchowjh/ts-utils/blob/c789e8a/scripts/utils.ts#L159)
 
 ---
 
@@ -381,7 +381,7 @@ Promise to finish writing to file
 
 #### Defined in
 
-[scripts/utils.ts:97](https://github.com/jonathanchowjh/ts-utils/blob/676103e/scripts/utils.ts#L97)
+[scripts/utils.ts:97](https://github.com/jonathanchowjh/ts-utils/blob/c789e8a/scripts/utils.ts#L97)
 
 ---
 
@@ -411,7 +411,7 @@ Object or string, depending on input
 
 #### Defined in
 
-[scripts/utils.ts:47](https://github.com/jonathanchowjh/ts-utils/blob/676103e/scripts/utils.ts#L47)
+[scripts/utils.ts:47](https://github.com/jonathanchowjh/ts-utils/blob/c789e8a/scripts/utils.ts#L47)
 
 ---
 
@@ -446,7 +446,7 @@ Object or string, depending on input
 
 #### Defined in
 
-[scripts/utils.ts:21](https://github.com/jonathanchowjh/ts-utils/blob/676103e/scripts/utils.ts#L21)
+[scripts/utils.ts:21](https://github.com/jonathanchowjh/ts-utils/blob/c789e8a/scripts/utils.ts#L21)
 
 ---
 
@@ -477,7 +477,7 @@ Returns stack trace of previous function
 
 #### Defined in
 
-[scripts/utils.ts:223](https://github.com/jonathanchowjh/ts-utils/blob/676103e/scripts/utils.ts#L223)
+[scripts/utils.ts:223](https://github.com/jonathanchowjh/ts-utils/blob/c789e8a/scripts/utils.ts#L223)
 
 ---
 
@@ -507,4 +507,4 @@ Promise that waits for given number of milliseconds
 
 #### Defined in
 
-[scripts/utils.ts:210](https://github.com/jonathanchowjh/ts-utils/blob/676103e/scripts/utils.ts#L210)
+[scripts/utils.ts:210](https://github.com/jonathanchowjh/ts-utils/blob/c789e8a/scripts/utils.ts#L210)

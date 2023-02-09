@@ -1,6 +1,6 @@
 {
-  "name": "ts-impl",
-  "version": "1.0.3",
+  "name": "ts-workbench",
+  "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "files": [
@@ -24,7 +24,8 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "fs": "^0.0.1-security",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "ts-impl": "^1.0.3"
   },
   "devDependencies": {
     "@types/node": "^18.13.0",

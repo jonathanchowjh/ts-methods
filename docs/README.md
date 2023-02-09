@@ -1,4 +1,4 @@
-ts-impl / [Exports](modules.md)
+ts-workbench / [Exports](modules.md)
 
 # ts-utils
 
@@ -23,7 +23,7 @@ const {
   filePathCreate,
   filePathRead,
   filePathRoot,
-  path,
+  pathResolve,
 } = utils;
 
 const main = async () => {
@@ -50,7 +50,7 @@ const main = async () => {
   } catch (err: unknown) {
     await filePathCreate(filePathRoot(), "artifacts/json/constants.json");
     const filePath: string[] = await filePathRead(
-      path.resolve(filePathRoot(), "artifacts"),
+      pathResolve(filePathRoot(), "artifacts"),
       "Utility"
     );
   }

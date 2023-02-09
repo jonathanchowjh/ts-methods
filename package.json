@@ -6,6 +6,12 @@
   "files": [
     "dist"
   ],
+  "author": "Jonathan Chow",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonathanchowjh/ts-tools.git"
+  },
   "scripts": {
     "build": "chmod +x ./shell/build.sh && ./shell/build.sh",
     "docs": "chmod +x ./shell/docs.sh && ./shell/docs.sh",
@@ -15,8 +21,6 @@
     "prettier": "prettier --write --ignore-unknown **/*",
     "prepare": "npx husky install"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.3",
     "fs": "^0.0.1-security",

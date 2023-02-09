@@ -3,8 +3,7 @@ import path from "path";
 import readline from "readline";
 import "dotenv/config";
 
-export const JSON_LOCATION =
-  process.env.JSON_LOCATION || ".ts_utils_constants.json";
+export const JSON_LOCATION = process.env.JSON_LOCATION || "ts-tools.json";
 
 /* eslint-disable no-case-declarations */
 /* eslint-disable no-useless-escape */

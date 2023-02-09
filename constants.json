@@ -1,0 +1,14 @@
+{
+  "links": {
+    "nftseedlab/marketplace-api-v1": "git@github.com:nftseedlab/marketplace-api-v1.git",
+    "nftseedlab/marketplace-client": "git@github.com:nftseedlab/marketplace-client.git",
+    "nftseedlab/marketplace-contracts-v1": "git@github.com:nftseedlab/marketplace-contracts-v1.git",
+    "nftseedlab/nft-marketplace-contracts": "git@github.com:nftseedlab/nft-marketplace-contracts.git",
+    "nftseedlab/nft-contracts": "git@github.com:nftseedlab/nft-contracts.git",
+    "nftseedlab/hot-wallet-sdk": "git@github.com:nftseedlab/hot-wallet-sdk.git",
+    "nftseedlab/DEPR-marketplace-api": "git@github.com:nftseedlab/DEPR-marketplace-api.git",
+    "nftseedlab/marketplace-contract-sdk": "git@github.com:nftseedlab/marketplace-contract-sdk.git",
+    "nftseedlab/marketplace-database": "git@github.com:nftseedlab/marketplace-database.git",
+    "nftseedlab/blockchain-api": "git@github.com:nftseedlab/blockchain-api.git"
+  }
+}

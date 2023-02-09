@@ -54,7 +54,7 @@ main()
 
 ## Documentation
 
-[FULL DOCUMENTATION](https://github.com/jonathanchowjh/ts-tools)
+[FULL DOCUMENTATION](https://github.com/jonathanchowjh/ts-tools/docs/modules.md)
 
 ▸ **ErrorDefault**(`error`): [`UtilsError`](classes/UtilsError.md)
 

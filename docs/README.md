@@ -1,17 +1,17 @@
-ts-workbench / [Exports](modules.md)
+ts-methods / [Exports](modules.md)
 
-# ts-utils
+# ts-methods
 
 ### Installation
 
 ```shell
-npm i ts-impl
+npm i ts-methods
 ```
 
 ### Usage
 
 ```ts
-import utils from "ts-impl";
+import methods from "ts-methods";
 
 const {
   jsonSave,
@@ -24,7 +24,7 @@ const {
   filePathRead,
   filePathRoot,
   pathResolve,
-} = utils;
+} = methods;
 
 const main = async () => {
   // Example: json file save
@@ -33,7 +33,7 @@ const main = async () => {
     "goerli-utility",
     "0x65B165C17a8660e84e4427c4024fcB784577AB05"
   );
-  await jsonRead("addresses", "goerli-utility");
+  const ret: string = (await jsonRead("addresses", "goerli-utility")) as string;
 
   // Example: readline
   const name1: string = await readLine("What is your name: ");
@@ -46,9 +46,9 @@ const main = async () => {
 
   // Example: create file
   try {
-    await filePathExists(filePathRoot(), "artifacts/json/constants.json");
+    await filePathExists(filePathRoot(), "constants.json"); // throws error
   } catch (err: unknown) {
-    await filePathCreate(filePathRoot(), "artifacts/json/constants.json");
+    await filePathCreate(filePathRoot(), "constants.json"); // throws error
     const filePath: string[] = await filePathRead(
       pathResolve(filePathRoot(), "artifacts"),
       "Utility"

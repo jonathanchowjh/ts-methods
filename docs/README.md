@@ -11,32 +11,52 @@ npm i ts-impl
 ### Usage
 
 ```ts
-// Example: json file save
-await jsonSave(
-  "addresses",
-  "goerli-utility",
-  "0x65B165C17a8660e84e4427c4024fcB784577AB05"
-);
-await jsonRead("addresses", "goerli-utility");
+import {
+  jsonSave,
+  jsonRead,
+  readLine,
+  readLineSelect,
+  ErrorDefault,
+} from "ts-impl";
 
-// Example: readline
-const name: string = await readLine("What is your name: ");
-const name: string = await readLineSelect("What is your name: ", [
-  "Alice",
-  "Bryan",
-  "Sam",
-]);
+const main = async () => {
+  // Example: json file save
+  await jsonSave(
+    "addresses",
+    "goerli-utility",
+    "0x65B165C17a8660e84e4427c4024fcB784577AB05"
+  );
+  await jsonRead("addresses", "goerli-utility");
+
+  // Example: readline
+  const name1: string = await readLine("What is your name: ");
+  const name2: string = await readLineSelect("What is your name: ", [
+    "Alice",
+    "Bryan",
+    "Sam",
+  ]);
+  if (name1 === name2) throw ErrorDefault("same name error");
+
+  // Example: create file
+  try {
+    await filePathExists(filePathRoot(), "artifacts/json/constants.json");
+  } catch (err: unknown) {
+    await filePathCreate(filePathRoot(), "artifacts/json/constants.json");
+    const filePath: string[] = await filePathRead(
+      path.resolve(filePathRoot(), "artifacts"),
+      "Utility"
+    );
+  }
+};
+
+main()
+  .then((val) => console.log(val))
+  .catch((err) => console.error(err));
 ```
 
 ## Documentation
 
-[FULL DOCUMENTATION](https://github.com/jonathanchowjh/ts-utils/blob/be30434/scripts/utils.ts#L6)
-
-### JSON_LOCATION
-
-• `Const` **JSON_LOCATION**: `string`
-
-### ErrorDefault
+[FULL DOCUMENTATION](https://github.com/jonathanchowjh/ts-tools)
 
 ▸ **ErrorDefault**(`error`): [`UtilsError`](classes/UtilsError.md)
 
@@ -45,7 +65,7 @@ Returns Error based on function name of calling contract
 **`Example`**
 
 ```ts
-ErrorDefault("Error Message");
+throw ErrorDefault("Error Message");
 ```
 
 #### Parameters
@@ -61,7 +81,7 @@ Creates dir and file if does not exists
 **`Example`**
 
 ```ts
-filePathCreate(filePathRoot(), "artifacts/json/constants.json");
+await filePathCreate(filePathRoot(), "artifacts/json/constants.json");
 ```
 
 #### Parameters
@@ -72,8 +92,6 @@ filePathCreate(filePathRoot(), "artifacts/json/constants.json");
 | `location`      | `string`  | location to check if exist                          |
 | `isAllFolders?` | `boolean` | -                                                   |
 
-### filePathExists
-
 ▸ **filePathExists**(`root`, `location`): `Promise`<`void`\>
 
 Throws Error if folder does not exists
@@ -81,7 +99,7 @@ Throws Error if folder does not exists
 **`Example`**
 
 ```ts
-filePathExists(filePathRoot(), "artifacts/json/constants.json");
+await filePathExists(filePathRoot(), "artifacts/json/constants.json");
 ```
 
 #### Parameters
@@ -90,8 +108,6 @@ filePathExists(filePathRoot(), "artifacts/json/constants.json");
 | :--------- | :------- | :-------------------------------------------------- |
 | `root`     | `string` | root folder (path that has been confirmed to exist) |
 | `location` | `string` | location to check if exist                          |
-
-### filePathRead
 
 ▸ **filePathRead**(`currentDirPath`, `fileName`): `Promise`<`string`[]\>
 
@@ -110,8 +126,6 @@ await filePathRead(path.resolve(filePathRoot(), "artifacts"), "Utility");
 | `currentDirPath` | `string` | folder location                                |
 | `fileName`       | `string` | name of file (eg. 'Utility' given Utility.sol) |
 
-### filePathRoot
-
 ▸ **filePathRoot**(): `string`
 
 Get filePathRoot absolute path
@@ -121,8 +135,6 @@ Get filePathRoot absolute path
 ```ts
 filePathRoot();
 ```
-
-### filePathWalk
 
 ▸ **filePathWalk**(`dir`): `Promise`<`string`[]\>
 
@@ -139,8 +151,6 @@ await filePathWalk(path.resolve(filePathRoot(), "artifacts"));
 | Name  | Type     | Description     |
 | :---- | :------- | :-------------- |
 | `dir` | `string` | folder location |
-
-### filterKeys
 
 ▸ **filterKeys**(`obj`, `str`): `Object`
 
@@ -165,8 +175,6 @@ filterKeys(
 | `obj` | `Object` | Object to filter through |
 | `str` | `string` | Value to filter by       |
 
-### jsonRead
-
 ▸ **jsonRead**(`type?`, `name?`, `file?`): `Promise`<`undefined` \| `string` \| { `[k: string]`: `any`; }\>
 
 This reads json file given type and name
@@ -185,8 +193,6 @@ await jsonRead("addresses", "goerli-utility");
 | `name?` | `string` | (Optional) Name of saved data (eg. goerli-utility) |
 | `file?` | `string` | (Optional) File that data is saved in              |
 
-### jsonReadFull
-
 ▸ **jsonReadFull**(`file?`): `Promise`<{ `[k: string]`: `any`; }\>
 
 Parsed JSON given file (absolute path / relative path to root)
@@ -202,8 +208,6 @@ await jsonReadFull("utils/json/constants.json");
 | Name    | Type     |
 | :------ | :------- |
 | `file?` | `string` |
-
-### jsonSave
 
 ▸ **jsonSave**(`type`, `name`, `value`, `file?`): `Promise`<`void`\>
 
@@ -228,8 +232,6 @@ await jsonSave(
 | `value` | `string` | Value of saved data (eg. 0x65B165C17a8660e84e4427c4024fcB784577AB05) |
 | `file?` | `string` | (Optional) File that data is saved in                                |
 
-### jsonSaveFull
-
 ▸ **jsonSaveFull**(`obj`, `file?`): `Promise`<`void`\>
 
 This saves to json file full
@@ -247,8 +249,6 @@ await jsonSaveFull({ addresses: { key: "value" } });
 | `obj`   | `Object` | Object to save                        |
 | `file?` | `string` | (Optional) File that data is saved in |
 
-### readLine
-
 ▸ **readLine**(`question`): `Promise`<`string`\>
 
 readline question from terminal
@@ -264,8 +264,6 @@ const name: string = await readLine("What is your name: ");
 | Name       | Type     | Description                                   |
 | :--------- | :------- | :-------------------------------------------- |
 | `question` | `string` | question prompt before waiting for user input |
-
-### readLineSelect
 
 ▸ **readLineSelect**(`question`, `select`): `Promise`<`string`\>
 
@@ -288,8 +286,6 @@ const name: string = await readLineSelect("What is your name: ", [
 | `question` | `string`   | question prompt before waiting for user input |
 | `select`   | `string`[] | question prompt before waiting for user input |
 
-### stackTrace
-
 ▸ **stackTrace**(`fullTrace?`, `withLocation?`): `any`
 
 Returns stack trace of previous function
@@ -306,8 +302,6 @@ stackTrace(true, true);
 | :-------------- | :-------- |
 | `fullTrace?`    | `boolean` |
 | `withLocation?` | `boolean` |
-
-### timeout
 
 ▸ **timeout**(`ms`): `Promise`<`void`\>
 

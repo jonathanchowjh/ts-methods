@@ -66,7 +66,7 @@ Error.constructor
 
 #### Defined in
 
-[scripts/utils.ts:269](https://github.com/jonathanchowjh/ts-utils/blob/e095b65/scripts/utils.ts#L269)
+[scripts/utils.ts:269](https://github.com/jonathanchowjh/ts-utils/blob/6f29f27/scripts/utils.ts#L269)
 
 ## Properties
 

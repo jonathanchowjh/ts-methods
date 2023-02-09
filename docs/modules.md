@@ -38,7 +38,7 @@
 
 #### Defined in
 
-scripts/utils.ts:6
+[scripts/utils.ts:6](https://github.com/jonathanchowjh/ts-utils/blob/19b6d74/scripts/utils.ts#L6)
 
 ## Functions
 
@@ -66,7 +66,7 @@ ErrorDefault("Error Message");
 
 #### Defined in
 
-scripts/utils.ts:245
+[scripts/utils.ts:249](https://github.com/jonathanchowjh/ts-utils/blob/19b6d74/scripts/utils.ts#L249)
 
 ---
 
@@ -98,7 +98,7 @@ Promise to create if not exist
 
 #### Defined in
 
-scripts/utils.ts:381
+[scripts/utils.ts:385](https://github.com/jonathanchowjh/ts-utils/blob/19b6d74/scripts/utils.ts#L385)
 
 ---
 
@@ -129,7 +129,7 @@ Promise to check if path exist
 
 #### Defined in
 
-scripts/utils.ts:353
+[scripts/utils.ts:357](https://github.com/jonathanchowjh/ts-utils/blob/19b6d74/scripts/utils.ts#L357)
 
 ---
 
@@ -160,7 +160,7 @@ List of Absolute file paths
 
 #### Defined in
 
-scripts/utils.ts:285
+[scripts/utils.ts:289](https://github.com/jonathanchowjh/ts-utils/blob/19b6d74/scripts/utils.ts#L289)
 
 ---
 
@@ -184,7 +184,7 @@ filePathRoot absolute path
 
 #### Defined in
 
-scripts/utils.ts:338
+[scripts/utils.ts:342](https://github.com/jonathanchowjh/ts-utils/blob/19b6d74/scripts/utils.ts#L342)
 
 ---
 
@@ -214,7 +214,7 @@ List of Absolute file paths
 
 #### Defined in
 
-scripts/utils.ts:313
+[scripts/utils.ts:317](https://github.com/jonathanchowjh/ts-utils/blob/19b6d74/scripts/utils.ts#L317)
 
 ---
 
@@ -251,7 +251,7 @@ Filtered Object
 
 #### Defined in
 
-scripts/utils.ts:195
+[scripts/utils.ts:199](https://github.com/jonathanchowjh/ts-utils/blob/19b6d74/scripts/utils.ts#L199)
 
 ---
 
@@ -283,7 +283,7 @@ Object or string, depending on input
 
 #### Defined in
 
-scripts/utils.ts:117
+[scripts/utils.ts:121](https://github.com/jonathanchowjh/ts-utils/blob/19b6d74/scripts/utils.ts#L121)
 
 ---
 
@@ -313,7 +313,7 @@ JSON Object
 
 #### Defined in
 
-scripts/utils.ts:70
+[scripts/utils.ts:74](https://github.com/jonathanchowjh/ts-utils/blob/19b6d74/scripts/utils.ts#L74)
 
 ---
 
@@ -350,7 +350,7 @@ Promise to finish writing to file
 
 #### Defined in
 
-scripts/utils.ts:156
+[scripts/utils.ts:160](https://github.com/jonathanchowjh/ts-utils/blob/19b6d74/scripts/utils.ts#L160)
 
 ---
 
@@ -381,7 +381,7 @@ Promise to finish writing to file
 
 #### Defined in
 
-scripts/utils.ts:94
+[scripts/utils.ts:98](https://github.com/jonathanchowjh/ts-utils/blob/19b6d74/scripts/utils.ts#L98)
 
 ---
 
@@ -411,7 +411,7 @@ Object or string, depending on input
 
 #### Defined in
 
-scripts/utils.ts:44
+[scripts/utils.ts:48](https://github.com/jonathanchowjh/ts-utils/blob/19b6d74/scripts/utils.ts#L48)
 
 ---
 
@@ -446,7 +446,7 @@ Object or string, depending on input
 
 #### Defined in
 
-scripts/utils.ts:21
+[scripts/utils.ts:22](https://github.com/jonathanchowjh/ts-utils/blob/19b6d74/scripts/utils.ts#L22)
 
 ---
 
@@ -477,7 +477,7 @@ Returns stack trace of previous function
 
 #### Defined in
 
-scripts/utils.ts:220
+[scripts/utils.ts:224](https://github.com/jonathanchowjh/ts-utils/blob/19b6d74/scripts/utils.ts#L224)
 
 ---
 
@@ -507,4 +507,4 @@ Promise that waits for given number of milliseconds
 
 #### Defined in
 
-scripts/utils.ts:207
+[scripts/utils.ts:211](https://github.com/jonathanchowjh/ts-utils/blob/19b6d74/scripts/utils.ts#L211)

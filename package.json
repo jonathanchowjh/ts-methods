@@ -1,6 +1,6 @@
 {
   "name": "ts-methods",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "files": [
@@ -10,7 +10,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jonathanchowjh/ts-impl.git"
+    "url": "https://github.com/jonathanchowjh/ts-methods.git"
   },
   "scripts": {
     "build": "chmod +x ./shell/build.sh && ./shell/build.sh",

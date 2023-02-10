@@ -3,7 +3,7 @@ import path from "path";
 import readline from "readline";
 import "dotenv/config";
 
-export const JSON_LOCATION = process.env.JSON_LOCATION || "ts-tools.json";
+export const JSON_LOCATION = process.env.JSON_LOCATION || "ts-methods.json";
 export const pathResolve = path.resolve;
 
 /* eslint-disable no-case-declarations */
@@ -68,13 +68,14 @@ export const readLine = async (question: string): Promise<string> => {
  * @returns {Promise<{ [ k: string ]: any }>} JSON Object
  * @example
  * ```ts
- * await jsonReadFull('utils/json/constants.json');
+ * const obj: { [k: string]: any } = await jsonReadFull();
  * ```
  */
 export const jsonReadFull = async (
   file?: string
 ): Promise<{ [k: string]: any }> => {
   const fileName = file || JSON_LOCATION;
+  await filePathExists(filePathRoot(), fileName);
   const rawdata = await fs.promises.readFile(
     path.resolve(filePathRoot(), fileName)
   );
@@ -115,7 +116,7 @@ export const jsonSaveFull = async (
  * @returns {Promise<{ [ k: string ]: any } | string | undefined>} Object or string, depending on input
  * @example
  * ```ts
- * await jsonRead('addresses', 'goerli-utility');
+ * const val: string = await jsonRead('addresses', 'goerli-utility') as string;
  * ```
  */
 export const jsonRead = async (
@@ -187,7 +188,7 @@ export const jsonSave = async (
  * @returns {{ [ k: string ]: any }} Filtered Object
  * @example
  * ```ts
- * filterKeys(
+ * const obj: { [k: string]: any } = filterKeys(
  *    {
  *      'goerli-utility': ''
  *      'localhost-utility': ''
@@ -218,10 +219,13 @@ export const timeout = (ms: number): Promise<void> =>
  * @returns {string} Returns stack trace of previous function
  * @example
  * ```ts
- * stackTrace(true, true);
+ * const trace: string[] = stackTrace(false, false);
  * ```
  */
-export const stackTrace = (fullTrace?: boolean, withLocation?: boolean) => {
+export const stackTrace = (
+  fullTrace?: boolean,
+  withLocation?: boolean
+): string[] => {
   const obj: { [k: string]: any } = {};
   Error.captureStackTrace(obj, stackTrace);
   return obj.stack
@@ -243,11 +247,11 @@ export const stackTrace = (fullTrace?: boolean, withLocation?: boolean) => {
  * @param {string} error message of error
  * @example
  * ```ts
- * ErrorDefault("Error Message");
+ * throw ErrorDefault("Error Message");
  * ```
  */
 export const ErrorDefault = (error: string) => {
-  const name = `repo-scripts::${stackTrace()[1]}::${error}`;
+  const name = `ts-methods::${stackTrace()[1]}::${error}`;
   return new UtilsError(name);
 };
 
@@ -261,7 +265,7 @@ export const ErrorDefault = (error: string) => {
  * } catch (err: unknown) {
  *   if (
  *     !(err instanceof UtilsError) ||
- *     !err.message.includes("repo-scripts::filePathCreate")
+ *     !err.message.includes("ts-methods::filePathCreate")
  *   ) throw ErrorDefault("Rethrown Error: Not expected repo-scripts::filePathCreate error");
  * }
  * ```
@@ -280,7 +284,7 @@ export class UtilsError extends Error {
  * @returns {Promise<string[]>} List of Absolute file paths
  * @example
  * ```ts
- * await filePathRead(
+ * const filePath: string[] = await filePathRead(
  *    path.resolve(filePathRoot(), 'artifacts'),
  *    'Utility'
  * );
@@ -309,7 +313,7 @@ export const filePathRead = async (
  * @returns {Promise<string[]>} List of Absolute file paths
  * @example
  * ```ts
- * await filePathWalk(
+ * const filePath: string[] = await filePathWalk(
  *    path.resolve(filePathRoot(), 'artifacts')
  * );
  * ```
@@ -336,7 +340,7 @@ export const filePathWalk = async (dir: string): Promise<string[]> => {
  * @returns {string} filePathRoot absolute path
  * @example
  * ```ts
- * filePathRoot();
+ * const root: string = filePathRoot();
  * ```
  */
 export const filePathRoot = (): string =>
@@ -351,7 +355,7 @@ export const filePathRoot = (): string =>
  * @returns {Promise<void>} Promise to check if path exist
  * @example
  * ```ts
- * filePathExists(filePathRoot(), 'artifacts/json/constants.json');
+ * await filePathExists(filePathRoot(), 'artifacts/json/constants.json');
  * ```
  */
 export const filePathExists = async (
@@ -379,7 +383,7 @@ export const filePathExists = async (
  * @returns {Promise<void>} Promise to create if not exist
  * @example
  * ```ts
- * filePathCreate(filePathRoot(), 'artifacts/json/constants.json');
+ * await filePathCreate(filePathRoot(), 'artifacts/json/constants.json');
  * ```
  */
 export const filePathCreate = async (

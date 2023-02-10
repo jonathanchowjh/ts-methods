@@ -1,9 +1,3 @@
-secrets/**.pub
-secrets/**
-secrets/*
-storage
-storage/*
-
 node_modules
 .env
 coverage

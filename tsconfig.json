@@ -1,5 +1,5 @@
 {
-  "include": ["scripts/*"],
+  "include": ["scripts/*", "tests/*", "tests/unit/utils.test.ts"],
   "compilerOptions": {
     "target": "es2020",
     "moduleResolution": "node",

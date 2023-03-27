@@ -1,6 +1,47 @@
 import fs from "fs";
 import path from "path";
 import { UtilsError } from "./error";
+import { safeExecute } from "./os";
+
+export const root = async (): Promise<string> =>
+  __dirname.includes("node_modules")
+    ? __dirname.split("node_modules")[0]
+    : packageRoot();
+
+export const packageRoot = async (): Promise<string> => {
+  const currPath = __dirname.split("/");
+  for (let i = currPath.length - 1; i >= 0; i--) {
+    const tempPath = currPath.slice(0, i + 1).join("/");
+    const val = await safeExecute(`cd ${tempPath} && ls`);
+    if (val.includes("package.json")) {
+      return currPath.slice(0, i + 1).join("/");
+    }
+  }
+  throw new UtilsError("Pakage Root Not Found");
+};
+
+type Nested<T> = Array<T | Nested<T>>;
+
+export const walk = async (
+  dir: string,
+  flatten?: boolean
+): Promise<Nested<string>> => {
+  const files = await fs.promises.readdir(dir);
+  const filesInDepth: Nested<string> = await Promise.all(
+    files.map(async (file) => {
+      const filePath = path.join(dir, file);
+      const stats = await fs.promises.stat(filePath);
+      if (stats.isDirectory()) return walk(filePath);
+      if (stats.isFile()) return filePath;
+      throw new UtilsError("invalid-file-type");
+    })
+  );
+  if (!flatten) return filesInDepth;
+  const flattenedFilesInDepth: string[] = (filesInDepth as any[]).flat(
+    Infinity
+  );
+  return flattenedFilesInDepth;
+};
 
 /* eslint-disable */
 

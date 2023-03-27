@@ -43,23 +43,6 @@ export const stackTrace = (
     });
 };
 
-// Usage: isErrorWithMessage(err) => error is Error
-export const isErrorWithMessage = (error: unknown): error is Error =>
-  typeof error === "object" &&
-  error !== null &&
-  "message" in error &&
-  typeof (error as Record<string, unknown>).message === "string";
-
-// Usage: toErrorWithMessage(err) => Error
-export const toErrorWithMessage = (maybeError: unknown): Error => {
-  if (isErrorWithMessage(maybeError)) return maybeError;
-  try {
-    return new UtilsError(JSON.stringify(maybeError));
-  } catch {
-    return new UtilsError(String(maybeError));
-  }
-};
-
 // Usage: await catchError<ReturnType<func1>>(() => func1(a, b))
 export const catchError = async <R>(
   callback: () => R,
@@ -81,5 +64,22 @@ export const catchError = async <R>(
     }
     // RETURNS null when error is caught
     return null;
+  }
+};
+
+// Usage: isErrorWithMessage(err) => error is Error
+export const isErrorWithMessage = (error: unknown): error is Error =>
+  typeof error === "object" &&
+  error !== null &&
+  "message" in error &&
+  typeof (error as Record<string, unknown>).message === "string";
+
+// Usage: toErrorWithMessage(err) => Error
+export const toErrorWithMessage = (maybeError: unknown): Error => {
+  if (isErrorWithMessage(maybeError)) return maybeError;
+  try {
+    return new UtilsError(JSON.stringify(maybeError));
+  } catch {
+    return new UtilsError(String(maybeError));
   }
 };

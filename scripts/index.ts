@@ -1,7 +1,4 @@
-import util from "util";
-import { exec } from "child_process";
-
-const execute = util.promisify(exec);
+import { safeExecute } from "../src/os";
 
 /* eslint-disable */
 
@@ -9,12 +6,13 @@ const main = async () => {
   // console.log(process.argv)
   switch (process.argv[2]) {
     case "error":
-      const errRet = await execute("npx ts-node scripts/error.ts");
-      console.log(errRet.stdout);
+      console.log(await safeExecute("npx ts-node scripts/error.ts"));
       break;
     case "os":
-      const osRet = await execute("npx ts-node scripts/os.ts");
-      console.log(osRet.stdout);
+      console.log(await safeExecute("npx ts-node scripts/os.ts"));
+      break;
+    case "fs":
+      console.log(await safeExecute("npx ts-node scripts/fs.ts"));
       break;
     default:
       break;

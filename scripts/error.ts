@@ -10,11 +10,11 @@ import {
 /* eslint-disable */
 
 const testTrace = () => stackTrace();
-const throwUtilsError = (msg?: string) => {
+const throwUtilsError = (msg?: string): void => {
   const message = msg ?? "sample error";
   throw new UtilsError(message);
 };
-const throwDefaultError = (msg: string) => {
+const throwDefaultError = (msg: string): void => {
   const message = msg ?? "sample error";
   throw new DefaultError(message);
 };
@@ -22,8 +22,12 @@ const addFunc = (a: number, b: number) => a + b;
 
 const main = async () => {
   console.log(testTrace());
-  await catchError(() => throwUtilsError("error1"));
-  await catchError(() => throwDefaultError("error2"));
+  await catchError<ReturnType<typeof throwUtilsError>>(() =>
+    throwUtilsError("error1")
+  );
+  await catchError<ReturnType<typeof throwDefaultError>>(() =>
+    throwDefaultError("error2")
+  );
   try {
     throwUtilsError();
   } catch (error: unknown) {
@@ -40,7 +44,9 @@ const main = async () => {
   } catch (err: unknown) {
     console.log(toErrorWithMessage(err).message);
   }
-  console.log(await catchError(() => addFunc(5, 2)));
+  console.log(
+    await catchError<ReturnType<typeof addFunc>>(() => addFunc(5, 2))
+  );
 };
 
 main()

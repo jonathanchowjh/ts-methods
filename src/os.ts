@@ -40,7 +40,12 @@ export const safeExecute = async (
   return val.stdout;
 };
 
-type Machine = "Linux" | "Mac" | "Cygwin" | "MinGw";
+export type Machine = "Linux" | "Mac" | "Cygwin" | "MinGw";
+
+export type MachineFunctions = {
+  // eslint-disable-next-line no-unused-vars
+  [key in Machine]?: string;
+};
 
 // Usage: await uname() => "Mac"
 export const uname = async (): Promise<Machine> => {
@@ -51,11 +56,6 @@ export const uname = async (): Promise<Machine> => {
   if (mach === "CYGWIN") return "Cygwin";
   if (mach === "MINGW") return "MinGw";
   throw new UtilsError("Invalid Machine Type");
-};
-
-type MachineFunctions = {
-  // eslint-disable-next-line no-unused-vars
-  [key in Machine]?: string;
 };
 
 // Usage: await (unameExecute({ Mac: "ls" }))()

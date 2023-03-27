@@ -2,6 +2,7 @@ import { exec } from "child_process";
 
 import { catchError, UtilsError } from "./error";
 
+// Usage: await execute("echo me") => { stdout: "me", stderr: "" }
 export const execute = (
   command: string
 ): Promise<{ stdout: string; stderr: string }> =>
@@ -12,6 +13,7 @@ export const execute = (
     });
   });
 
+// Usage: await catchExecute("echo me") => { stdout: "me", stderr: "" }
 export const catchExecute = async (
   command: string,
   verbose?: boolean
@@ -23,6 +25,7 @@ export const catchExecute = async (
   return val;
 };
 
+// Usage: await safeExecute("echo me") => "me"
 export const safeExecute = async (
   command: string,
   verbose?: boolean
@@ -39,6 +42,7 @@ export const safeExecute = async (
 
 type Machine = "Linux" | "Mac" | "Cygwin" | "MinGw";
 
+// Usage: await uname() => "Mac"
 export const uname = async (): Promise<Machine> => {
   const machine = await safeExecute("uname -s");
   const machineTrimmed = machine.trim();

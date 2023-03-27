@@ -45,13 +45,29 @@ type Machine = "Linux" | "Mac" | "Cygwin" | "MinGw";
 // Usage: await uname() => "Mac"
 export const uname = async (): Promise<Machine> => {
   const machine = await safeExecute("uname -s");
-  const machineTrimmed = machine.trim();
-  if (machineTrimmed === "Linux") return "Linux";
-  if (machineTrimmed === "Darwin") return "Mac";
-  if (machineTrimmed === "CYGWIN") return "Cygwin";
-  if (machineTrimmed === "MINGW") return "MinGw";
+  const mach = machine.trim();
+  if (mach === "Linux") return "Linux";
+  if (mach === "Darwin") return "Mac";
+  if (mach === "CYGWIN") return "Cygwin";
+  if (mach === "MINGW") return "MinGw";
   throw new UtilsError("Invalid Machine Type");
 };
+
+type MachineFunctions = {
+  // eslint-disable-next-line no-unused-vars
+  [key in Machine]?: string;
+};
+
+// Usage: await (unameExecute({ Mac: "ls" }))()
+export const unameExecute =
+  (functions: MachineFunctions, verbose?: boolean) => async () => {
+    const machine = await uname();
+    if (functions[machine] === undefined) {
+      throw new UtilsError(`Invalid Machine: ${machine} wasnt instantiated`);
+    }
+    const machineCmd = functions[machine] as string;
+    return catchExecute(machineCmd, verbose);
+  };
 
 /**
  * uname -s

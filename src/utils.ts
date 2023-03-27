@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
 import readline from "readline";
-import "dotenv/config";
 
 export const JSON_LOCATION = process.env.JSON_LOCATION || "ts-methods.json";
 export const pathResolve = path.resolve;
@@ -250,8 +249,8 @@ export const stackTrace = (
  * throw ErrorDefault("Error Message");
  * ```
  */
-export const ErrorDefault = (error: string) => {
-  const name = `ts-methods::${stackTrace()[1]}::${error}`;
+export const ErrorDefault = (error: string, errorSource?: string) => {
+  const name = `${errorSource ?? "ts-methods"}::${stackTrace()[1]}::${error}`;
   return new UtilsError(name);
 };
 

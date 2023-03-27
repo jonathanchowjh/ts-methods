@@ -13,7 +13,8 @@
     "url": "https://github.com/jonathanchowjh/ts-methods.git"
   },
   "scripts": {
-    "test": "jest",
+    "test": "vitest",
+    "scripts": "npx ts-node scripts/index",
     "build": "chmod +x ./shell/build.sh && ./shell/build.sh",
     "docs": "chmod +x ./shell/docs.sh && ./shell/docs.sh",
     "version": "chmod +x ./shell/version.sh && ./shell/version.sh",
@@ -43,7 +44,8 @@
     "ts-jest": "^29.0.5",
     "typedoc": "^0.23.24",
     "typedoc-plugin-markdown": "^3.14.0",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "vitest": "^0.29.7"
   },
   "lint-staged": {
     "**/*.ts": "npm run lint",

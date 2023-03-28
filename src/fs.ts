@@ -2,31 +2,63 @@ import fs from "fs";
 import path from "path";
 import { UtilsError, catchError } from "./error";
 
-export const read = async (loc: string): Promise<string> => {
-  if (!(await pathExists(loc))) throw new UtilsError("file path doesn't exist");
-  const ret = await catchError<ReturnType<typeof fs.promises.readFile>>(
-    async () => fs.promises.readFile(loc)
+export const readJson = async <T extends object>(
+  fullLoc: string
+): Promise<T> => {
+  const raw = await read(fullLoc);
+  const ret = await catchError<ReturnType<typeof JSON.parse>>(() =>
+    JSON.parse(raw)
   );
-  if (ret == null && typeof ret == "object")
+  if (ret == null && typeof ret === "object") {
+    throw new UtilsError("JSON parsing Error");
+  }
+  return ret;
+};
+
+export const writeJson = async <T extends object>(
+  fullLoc: string,
+  data: T
+): Promise<boolean> => {
+  const ret = await catchError<ReturnType<typeof JSON.stringify>>(() =>
+    JSON.stringify(data)
+  );
+  if (ret == null && typeof ret === "object") return false;
+  return write(fullLoc, ret);
+};
+
+export const read = async (fullLoc: string): Promise<string> => {
+  if (!(await pathExists(fullLoc)))
+    throw new UtilsError("file path doesn't exist");
+  const ret = await catchError<ReturnType<typeof fs.promises.readFile>>(
+    async () => fs.promises.readFile(fullLoc)
+  );
+  if (ret == null && typeof ret == "object") {
     throw new UtilsError("readFile threw error");
+  }
   return ret.toString();
 };
 
-export const write = async (loc: string, data: string): Promise<boolean> => {
-  if (!(await pathExists(loc))) return false;
+export const write = async (
+  fullLoc: string,
+  data: string
+): Promise<boolean> => {
+  if (!(await pathExists(fullLoc))) return false;
   const ret = await catchError<ReturnType<typeof fs.promises.writeFile>>(
-    async () => fs.promises.writeFile(loc, data)
+    async () => fs.promises.writeFile(fullLoc, data)
   );
   if (ret == null && typeof ret == "object") return false;
   return true;
 };
 
-export const root = async (): Promise<string> =>
+export const root = async (loc: string) =>
+  path.resolve(await rootDefault(), loc);
+
+export const rootDefault = async (): Promise<string> =>
   __dirname.includes("node_modules")
     ? __dirname.split("node_modules")[0]
-    : rootDefault();
+    : rootFromPath();
 
-export const rootDefault = async (): Promise<string> => {
+export const rootFromPath = async (): Promise<string> => {
   const iter = await pathIterate<string>(__filename, false, async (p, c) => {
     if (p === "" && c === "") throw new UtilsError("No NodeJS root found");
     const files = await fs.promises.readdir(p);
@@ -91,12 +123,21 @@ export const pathIterate = async <R>(
   return callback("", "", true);
 };
 
+export const pathFind = async (dir: string, file: string) => {
+  const filesInDir = await walk(dir);
+  const files = flatten<string>(filesInDir as any[]);
+  for (let i = 0; i < files.length; i++) {
+    const temp = files[i].split("/");
+    if (temp[temp.length - 1] === file) return files[i];
+  }
+  return "";
+};
+
+export const flatten = <T>(arr: T[]) => arr.flat(Infinity);
+
 export type Nested<T> = Array<T | Nested<T>>;
 
-export const walk = async (
-  dir: string,
-  flatten?: boolean
-): Promise<Nested<string>> => {
+export const walk = async (dir: string): Promise<Nested<string>> => {
   const files = await fs.promises.readdir(dir);
   const filesInDepth: Nested<string> = await Promise.all(
     files.map(async (file) => {
@@ -107,11 +148,7 @@ export const walk = async (
       throw new UtilsError("invalid-file-type");
     })
   );
-  if (!flatten) return filesInDepth;
-  const flattenedFilesInDepth: string[] = (filesInDepth as any[]).flat(
-    Infinity
-  );
-  return flattenedFilesInDepth;
+  return filesInDepth;
 };
 
 /* eslint-disable */

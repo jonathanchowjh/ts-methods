@@ -23,7 +23,10 @@
         "import/extensions": "off",
         "no-use-before-define": "off",
         "no-plusplus": "off",
-        "no-await-in-loop": "off"
+        "no-await-in-loop": "off",
+        "eqeqeq": "off",
+        "consistent-return": "off",
+        "no-unused-expressions": "off"
       }
     }
   ]

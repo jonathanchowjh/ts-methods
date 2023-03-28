@@ -37,7 +37,7 @@ export const stackTrace = (
     .filter((val: string) => {
       // filter stacktrace using keys
       if (noFilterTrace) return true;
-      if (val === "" || val === undefined || val === null) return false;
+      if (val === "" || val == undefined || val == null) return false;
       const words = ["Module.", "Object.", "Function.", "file://"];
       return !new RegExp(words.join("|")).test(val);
     });
@@ -66,6 +66,9 @@ export const catchError = async <R>(
     return null;
   }
 };
+
+export const isNull = (val: any): boolean =>
+  val == null && typeof val == "object";
 
 // Usage: isErrorWithMessage(err) => error is Error
 export const isErrorWithMessage = (error: unknown): error is Error =>

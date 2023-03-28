@@ -31,7 +31,7 @@ export const safeExecute = async (
   verbose?: boolean
 ): Promise<string> => {
   const val = await catchExecute(command, verbose);
-  if (val === null) {
+  if (val == null && typeof val == "object") {
     throw new UtilsError(`ERROR CAUGHT => Execute => ${command}`);
   }
   if (val.stderr !== "") {

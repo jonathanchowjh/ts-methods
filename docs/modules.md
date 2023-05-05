@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[src/utils.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L5)
+[src/utils.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/ec22186/src/utils.ts#L5)
 
 ## Functions
 
@@ -68,7 +68,7 @@ throw ErrorDefault("Error Message");
 
 #### Defined in
 
-[src/utils.ts:252](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L252)
+[src/utils.ts:252](https://github.com/jonathanchowjh/ts-utils/blob/ec22186/src/utils.ts#L252)
 
 ---
 
@@ -100,7 +100,7 @@ Promise to create if not exist
 
 #### Defined in
 
-[src/utils.ts:388](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L388)
+[src/utils.ts:388](https://github.com/jonathanchowjh/ts-utils/blob/ec22186/src/utils.ts#L388)
 
 ---
 
@@ -131,7 +131,7 @@ Promise to check if path exist
 
 #### Defined in
 
-[src/utils.ts:360](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L360)
+[src/utils.ts:360](https://github.com/jonathanchowjh/ts-utils/blob/ec22186/src/utils.ts#L360)
 
 ---
 
@@ -165,7 +165,7 @@ List of Absolute file paths
 
 #### Defined in
 
-[src/utils.ts:292](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L292)
+[src/utils.ts:292](https://github.com/jonathanchowjh/ts-utils/blob/ec22186/src/utils.ts#L292)
 
 ---
 
@@ -189,7 +189,7 @@ filePathRoot absolute path
 
 #### Defined in
 
-[src/utils.ts:345](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L345)
+[src/utils.ts:345](https://github.com/jonathanchowjh/ts-utils/blob/ec22186/src/utils.ts#L345)
 
 ---
 
@@ -221,7 +221,7 @@ List of Absolute file paths
 
 #### Defined in
 
-[src/utils.ts:320](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L320)
+[src/utils.ts:320](https://github.com/jonathanchowjh/ts-utils/blob/ec22186/src/utils.ts#L320)
 
 ---
 
@@ -258,7 +258,7 @@ Filtered Object
 
 #### Defined in
 
-[src/utils.ts:199](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L199)
+[src/utils.ts:199](https://github.com/jonathanchowjh/ts-utils/blob/ec22186/src/utils.ts#L199)
 
 ---
 
@@ -290,7 +290,7 @@ Object or string, depending on input
 
 #### Defined in
 
-[src/utils.ts:121](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L121)
+[src/utils.ts:121](https://github.com/jonathanchowjh/ts-utils/blob/ec22186/src/utils.ts#L121)
 
 ---
 
@@ -320,7 +320,7 @@ JSON Object
 
 #### Defined in
 
-[src/utils.ts:73](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L73)
+[src/utils.ts:73](https://github.com/jonathanchowjh/ts-utils/blob/ec22186/src/utils.ts#L73)
 
 ---
 
@@ -357,7 +357,7 @@ Promise to finish writing to file
 
 #### Defined in
 
-[src/utils.ts:160](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L160)
+[src/utils.ts:160](https://github.com/jonathanchowjh/ts-utils/blob/ec22186/src/utils.ts#L160)
 
 ---
 
@@ -388,7 +388,7 @@ Promise to finish writing to file
 
 #### Defined in
 
-[src/utils.ts:98](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L98)
+[src/utils.ts:98](https://github.com/jonathanchowjh/ts-utils/blob/ec22186/src/utils.ts#L98)
 
 ---
 
@@ -451,7 +451,7 @@ Object or string, depending on input
 
 #### Defined in
 
-[src/utils.ts:47](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L47)
+[src/utils.ts:47](https://github.com/jonathanchowjh/ts-utils/blob/ec22186/src/utils.ts#L47)
 
 ---
 
@@ -486,7 +486,7 @@ Object or string, depending on input
 
 #### Defined in
 
-[src/utils.ts:21](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L21)
+[src/utils.ts:21](https://github.com/jonathanchowjh/ts-utils/blob/ec22186/src/utils.ts#L21)
 
 ---
 
@@ -517,7 +517,7 @@ Returns stack trace of previous function
 
 #### Defined in
 
-[src/utils.ts:224](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L224)
+[src/utils.ts:224](https://github.com/jonathanchowjh/ts-utils/blob/ec22186/src/utils.ts#L224)
 
 ---
 
@@ -547,4 +547,4 @@ Promise that waits for given number of milliseconds
 
 #### Defined in
 
-[src/utils.ts:211](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L211)
+[src/utils.ts:211](https://github.com/jonathanchowjh/ts-utils/blob/ec22186/src/utils.ts#L211)

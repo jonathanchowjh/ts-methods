@@ -39,27 +39,28 @@
 
 #### Defined in
 
-[scripts/utils.ts:6](https://github.com/jonathanchowjh/ts-utils/blob/06f5d21/scripts/utils.ts#L6)
+[src/utils.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L5)
 
 ## Functions
 
 ### ErrorDefault
 
-▸ **ErrorDefault**(`error`): [`UtilsError`](classes/UtilsError.md)
+▸ **ErrorDefault**(`error`, `errorSource?`): [`UtilsError`](classes/UtilsError.md)
 
 Returns Error based on function name of calling contract
 
 **`Example`**
 
 ```ts
-ErrorDefault("Error Message");
+throw ErrorDefault("Error Message");
 ```
 
 #### Parameters
 
-| Name    | Type     | Description      |
-| :------ | :------- | :--------------- |
-| `error` | `string` | message of error |
+| Name           | Type     | Description      |
+| :------------- | :------- | :--------------- |
+| `error`        | `string` | message of error |
+| `errorSource?` | `string` | -                |
 
 #### Returns
 
@@ -67,7 +68,7 @@ ErrorDefault("Error Message");
 
 #### Defined in
 
-[scripts/utils.ts:249](https://github.com/jonathanchowjh/ts-utils/blob/06f5d21/scripts/utils.ts#L249)
+[src/utils.ts:252](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L252)
 
 ---
 
@@ -80,7 +81,7 @@ Creates dir and file if does not exists
 **`Example`**
 
 ```ts
-filePathCreate(filePathRoot(), "artifacts/json/constants.json");
+await filePathCreate(filePathRoot(), "artifacts/json/constants.json");
 ```
 
 #### Parameters
@@ -99,7 +100,7 @@ Promise to create if not exist
 
 #### Defined in
 
-[scripts/utils.ts:385](https://github.com/jonathanchowjh/ts-utils/blob/06f5d21/scripts/utils.ts#L385)
+[src/utils.ts:388](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L388)
 
 ---
 
@@ -112,7 +113,7 @@ Throws Error if folder does not exists
 **`Example`**
 
 ```ts
-filePathExists(filePathRoot(), "artifacts/json/constants.json");
+await filePathExists(filePathRoot(), "artifacts/json/constants.json");
 ```
 
 #### Parameters
@@ -130,7 +131,7 @@ Promise to check if path exist
 
 #### Defined in
 
-[scripts/utils.ts:357](https://github.com/jonathanchowjh/ts-utils/blob/06f5d21/scripts/utils.ts#L357)
+[src/utils.ts:360](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L360)
 
 ---
 
@@ -143,7 +144,10 @@ Getting File Path from Folder
 **`Example`**
 
 ```ts
-await filePathRead(path.resolve(filePathRoot(), "artifacts"), "Utility");
+const filePath: string[] = await filePathRead(
+  path.resolve(filePathRoot(), "artifacts"),
+  "Utility"
+);
 ```
 
 #### Parameters
@@ -161,7 +165,7 @@ List of Absolute file paths
 
 #### Defined in
 
-[scripts/utils.ts:289](https://github.com/jonathanchowjh/ts-utils/blob/06f5d21/scripts/utils.ts#L289)
+[src/utils.ts:292](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L292)
 
 ---
 
@@ -174,7 +178,7 @@ Get filePathRoot absolute path
 **`Example`**
 
 ```ts
-filePathRoot();
+const root: string = filePathRoot();
 ```
 
 #### Returns
@@ -185,7 +189,7 @@ filePathRoot absolute path
 
 #### Defined in
 
-[scripts/utils.ts:342](https://github.com/jonathanchowjh/ts-utils/blob/06f5d21/scripts/utils.ts#L342)
+[src/utils.ts:345](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L345)
 
 ---
 
@@ -198,7 +202,9 @@ Get all files from a given parent directory
 **`Example`**
 
 ```ts
-await filePathWalk(path.resolve(filePathRoot(), "artifacts"));
+const filePath: string[] = await filePathWalk(
+  path.resolve(filePathRoot(), "artifacts")
+);
 ```
 
 #### Parameters
@@ -215,7 +221,7 @@ List of Absolute file paths
 
 #### Defined in
 
-[scripts/utils.ts:317](https://github.com/jonathanchowjh/ts-utils/blob/06f5d21/scripts/utils.ts#L317)
+[src/utils.ts:320](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L320)
 
 ---
 
@@ -228,7 +234,7 @@ Filter Object by its key value
 **`Example`**
 
 ```ts
-filterKeys(
+const obj: { [k: string]: any } = filterKeys(
    {
      'goerli-utility': ''
      'localhost-utility': ''
@@ -252,7 +258,7 @@ Filtered Object
 
 #### Defined in
 
-[scripts/utils.ts:199](https://github.com/jonathanchowjh/ts-utils/blob/06f5d21/scripts/utils.ts#L199)
+[src/utils.ts:199](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L199)
 
 ---
 
@@ -265,7 +271,7 @@ This reads json file given type and name
 **`Example`**
 
 ```ts
-await jsonRead("addresses", "goerli-utility");
+const val: string = (await jsonRead("addresses", "goerli-utility")) as string;
 ```
 
 #### Parameters
@@ -284,7 +290,7 @@ Object or string, depending on input
 
 #### Defined in
 
-[scripts/utils.ts:121](https://github.com/jonathanchowjh/ts-utils/blob/06f5d21/scripts/utils.ts#L121)
+[src/utils.ts:121](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L121)
 
 ---
 
@@ -297,7 +303,7 @@ Parsed JSON given file (absolute path / relative path to root)
 **`Example`**
 
 ```ts
-await jsonReadFull("utils/json/constants.json");
+const obj: { [k: string]: any } = await jsonReadFull();
 ```
 
 #### Parameters
@@ -314,7 +320,7 @@ JSON Object
 
 #### Defined in
 
-[scripts/utils.ts:74](https://github.com/jonathanchowjh/ts-utils/blob/06f5d21/scripts/utils.ts#L74)
+[src/utils.ts:73](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L73)
 
 ---
 
@@ -351,7 +357,7 @@ Promise to finish writing to file
 
 #### Defined in
 
-[scripts/utils.ts:160](https://github.com/jonathanchowjh/ts-utils/blob/06f5d21/scripts/utils.ts#L160)
+[src/utils.ts:160](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L160)
 
 ---
 
@@ -382,7 +388,7 @@ Promise to finish writing to file
 
 #### Defined in
 
-[scripts/utils.ts:98](https://github.com/jonathanchowjh/ts-utils/blob/06f5d21/scripts/utils.ts#L98)
+[src/utils.ts:98](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L98)
 
 ---
 
@@ -445,7 +451,7 @@ Object or string, depending on input
 
 #### Defined in
 
-[scripts/utils.ts:48](https://github.com/jonathanchowjh/ts-utils/blob/06f5d21/scripts/utils.ts#L48)
+[src/utils.ts:47](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L47)
 
 ---
 
@@ -480,20 +486,20 @@ Object or string, depending on input
 
 #### Defined in
 
-[scripts/utils.ts:22](https://github.com/jonathanchowjh/ts-utils/blob/06f5d21/scripts/utils.ts#L22)
+[src/utils.ts:21](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L21)
 
 ---
 
 ### stackTrace
 
-▸ **stackTrace**(`fullTrace?`, `withLocation?`): `any`
+▸ **stackTrace**(`fullTrace?`, `withLocation?`): `string`[]
 
 Returns stack trace of previous function
 
 **`Example`**
 
 ```ts
-stackTrace(true, true);
+const trace: string[] = stackTrace(false, false);
 ```
 
 #### Parameters
@@ -505,13 +511,13 @@ stackTrace(true, true);
 
 #### Returns
 
-`any`
+`string`[]
 
 Returns stack trace of previous function
 
 #### Defined in
 
-[scripts/utils.ts:224](https://github.com/jonathanchowjh/ts-utils/blob/06f5d21/scripts/utils.ts#L224)
+[src/utils.ts:224](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L224)
 
 ---
 
@@ -541,4 +547,4 @@ Promise that waits for given number of milliseconds
 
 #### Defined in
 
-[scripts/utils.ts:211](https://github.com/jonathanchowjh/ts-utils/blob/06f5d21/scripts/utils.ts#L211)
+[src/utils.ts:211](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L211)

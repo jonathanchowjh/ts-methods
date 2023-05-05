@@ -46,12 +46,12 @@ const main = async () => {
 
   // Example: create file
   try {
-    await filePathExists(filePathRoot(), "constants.json"); // throws error
+    await filePathExists(filePathRoot(), "ts-methods.json"); // throws error
   } catch (err: unknown) {
-    await filePathCreate(filePathRoot(), "constants.json"); // throws error
+    await filePathCreate(filePathRoot(), "ts-methods.json"); // throws error
     const filePath: string[] = await filePathRead(
-      pathResolve(filePathRoot(), "artifacts"),
-      "Utility"
+      pathResolve(filePathRoot(), ""),
+      "ts-methods.json"
     );
   }
 };
@@ -63,7 +63,7 @@ main()
 
 ## Documentation
 
-[FULL DOCUMENTATION](https://github.com/jonathanchowjh/ts-tools/docs/modules.md)
+[FULL DOCUMENTATION](https://github.com/jonathanchowjh/ts-methods/docs/modules.md)
 
 ▸ **ErrorDefault**(`error`): [`UtilsError`](classes/UtilsError.md)
 

@@ -1,20 +1,19 @@
 import { safeExecute } from "../src/os";
+import { replMain } from "./repl";
 
 /* eslint-disable */
 
 const main = async () => {
   // console.log(process.argv)
+  if (process.argv.length < 3) return;
   switch (process.argv[2]) {
-    case "error":
-      console.log(await safeExecute("npx ts-node scripts/error.ts"));
-      break;
-    case "os":
-      console.log(await safeExecute("npx ts-node scripts/os.ts"));
-      break;
-    case "fs":
-      console.log(await safeExecute("npx ts-node scripts/fs.ts"));
+    case "repl":
+      await replMain();
       break;
     default:
+      console.log(
+        await safeExecute(`npx ts-node scripts/${process.argv[2]}.ts`)
+      );
       break;
   }
 };

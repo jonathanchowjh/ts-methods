@@ -1,5 +1,4 @@
 import { exec } from "child_process";
-
 import { catchError, UtilsError } from "./error";
 
 // Usage: await execute("echo me") => { stdout: "me", stderr: "" }

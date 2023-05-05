@@ -16,7 +16,7 @@ try {
 } catch (err: unknown) {
   if (
     !(err instanceof UtilsError) ||
-    !err.message.includes("repo-scripts::filePathCreate")
+    !err.message.includes("ts-methods::filePathCreate")
   )
     throw ErrorDefault(
       "Rethrown Error: Not expected repo-scripts::filePathCreate error"
@@ -66,7 +66,7 @@ Error.constructor
 
 #### Defined in
 
-[scripts/utils.ts:270](https://github.com/jonathanchowjh/ts-utils/blob/06f5d21/scripts/utils.ts#L270)
+[src/utils.ts:273](https://github.com/jonathanchowjh/ts-utils/blob/ab90dcb/src/utils.ts#L273)
 
 ## Properties
 

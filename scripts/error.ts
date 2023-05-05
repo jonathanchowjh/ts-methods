@@ -2,8 +2,8 @@ import {
   UtilsError,
   DefaultError,
   stackTrace,
-  isErrorWithMessage,
-  toErrorWithMessage,
+  isError,
+  toError,
   catchError,
 } from "../src/error";
 
@@ -31,18 +31,18 @@ const main = async () => {
   try {
     throwUtilsError();
   } catch (error: unknown) {
-    if (!isErrorWithMessage(error)) throw new Error("err");
+    if (!isError(error)) throw new Error("err");
     console.log(error.message);
   }
   try {
     throw 328732;
   } catch (err: unknown) {
-    console.log(toErrorWithMessage(err).message);
+    console.log(toError(err).message);
   }
   try {
     throw new DefaultError("test throw");
   } catch (err: unknown) {
-    console.log(toErrorWithMessage(err).message);
+    console.log(toError(err).message);
   }
   console.log(
     await catchError<ReturnType<typeof addFunc>>(() => addFunc(5, 2))

@@ -51,7 +51,7 @@ export const catchError = async <R>(
   try {
     return callback();
   } catch (error: unknown) {
-    if (!isErrorWithMessage(error)) {
+    if (!isError(error)) {
       throw new UtilsError("Invalid Error Thrown");
     }
     // eslint-disable-next-line no-console
@@ -70,16 +70,16 @@ export const catchError = async <R>(
 export const isNull = (val: any): boolean =>
   val == null && typeof val == "object";
 
-// Usage: isErrorWithMessage(err) => error is Error
-export const isErrorWithMessage = (error: unknown): error is Error =>
+// Usage: isError(err) => error is Error
+export const isError = (error: unknown): error is Error =>
   typeof error === "object" &&
   error !== null &&
   "message" in error &&
   typeof (error as Record<string, unknown>).message === "string";
 
-// Usage: toErrorWithMessage(err) => Error
-export const toErrorWithMessage = (maybeError: unknown): Error => {
-  if (isErrorWithMessage(maybeError)) return maybeError;
+// Usage: toError(err) => Error
+export const toError = (maybeError: unknown): Error => {
+  if (isError(maybeError)) return maybeError;
   try {
     return new UtilsError(JSON.stringify(maybeError));
   } catch {

@@ -6,3 +6,6 @@ typechain
 typechain-types
 dist
 .DS_Store
+
+constants.json
+storage

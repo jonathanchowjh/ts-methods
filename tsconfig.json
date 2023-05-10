@@ -1,7 +1,7 @@
 {
-  "include": ["src/*", "tests/*", "tests/unit/utils.test.ts"],
+  "include": ["src/*"],
   "compilerOptions": {
-    "target": "es2020",
+    "target": "ESNext",
     "moduleResolution": "node",
     "declaration": true,
     "sourceMap": true,

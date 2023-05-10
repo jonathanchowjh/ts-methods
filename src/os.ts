@@ -77,3 +77,5 @@ export const unameExecute =
  * *)          machine="UNKNOWN:${unameOut}"
  * https://www.hostinger.com/tutorials/cron-job
  */
+
+export const cron = () => {};

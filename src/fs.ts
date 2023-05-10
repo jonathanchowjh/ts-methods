@@ -2,23 +2,42 @@ import fs from "fs";
 import path from "path";
 import { UtilsError, catchError } from "./error";
 
-// export const readJson2D = async (
-//   fullLoc: string,
-//   key1?: string,
-//   key2?: string,
-//   value?: string
-// ): Promise<object | string | undefined> => {
-//   return "";
-// }
+// Usage: await readJson2D(await root("constants.json"), "key1", "key2")
+export const readJson2D = async (
+  fullLoc: string,
+  key1?: string,
+  key2?: string
+): Promise<{ [k: string]: any } | string | undefined> => {
+  if (!(await pathExists(fullLoc))) throw new UtilsError("Invalid Path");
+  const object = await readJson(fullLoc);
+  if (object === undefined) return undefined;
+  if (key1 === undefined) return object;
+  if (!Object.keys(object).includes(key1)) return object;
+  const typeVal = key1 as keyof typeof object;
+  if (key2 === undefined) return object[typeVal];
+  if (object[typeVal]) return object[typeVal][key2];
+  return undefined;
+};
 
-// export const writeJson2D = async (
-//   fullLoc: string,
-//   key1: string,
-//   key2: string,
-//   value: string
-// ): Promise<boolean> => {
-//   return true;
-// }
+// Usage: await writeJson2D(await root("constants.json"), "key1", "key2", "value")
+export const writeJson2D = async (
+  fullLoc: string,
+  key1: string,
+  key2: string,
+  value: string
+): Promise<boolean> => {
+  if (!(await pathExists(fullLoc))) throw new UtilsError("Invalid Path");
+  let object = await readJson2D(fullLoc, undefined, undefined);
+  if (object === undefined) object = {};
+  if (typeof object === "string") object = {};
+  if (object[key1] === undefined) object[key1] = {};
+  if (value === "\\DELETE") {
+    delete object[key1][key2];
+  } else {
+    object[key1][key2] = value;
+  }
+  return writeJson(fullLoc, object);
+};
 
 export type NestedArray = Array<NestedArray | string | number>;
 export type NestedObject = {

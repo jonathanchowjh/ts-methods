@@ -2,6 +2,16 @@ import fs from "fs";
 import path from "path";
 import { UtilsError, catchError } from "./error";
 
+export type Nested<T> = Array<T | Nested<T>>;
+export type NestedArray = Array<NestedArray | string | number>;
+export type NestedObject = {
+  [k: string]:
+    | NestedObject
+    | Array<NestedObject | NestedArray>
+    | string
+    | number;
+};
+
 // Usage: await readJson2D(await root("constants.json"), "key1", "key2")
 export const readJson2D = async (
   fullLoc: string,
@@ -39,26 +49,17 @@ export const writeJson2D = async (
   return writeJson(fullLoc, object);
 };
 
-export type NestedArray = Array<NestedArray | string | number>;
-export type NestedObject = {
-  [k: string]:
-    | NestedObject
-    | Array<NestedObject | NestedArray>
-    | string
-    | number;
-};
-
 export const readJson = async <T extends object>(
   fullLoc: string
 ): Promise<T> => {
   const raw = await read(fullLoc);
-  const ret = await catchError<ReturnType<typeof JSON.parse>>(() =>
-    JSON.parse(raw)
-  );
-  if (ret == null && typeof ret === "object") {
+  let ret: unknown;
+  try {
+    ret = JSON.parse(raw);
+  } catch (err: unknown) {
     throw new UtilsError("JSON parsing Error");
   }
-  return ret;
+  return ret as T;
 };
 
 export const writeJson = async <T extends object>(
@@ -181,8 +182,6 @@ export const pathFind = async (dir: string, file: string) => {
 
 export const flatten = <T>(arr: T[]) => arr.flat(Infinity);
 
-export type Nested<T> = Array<T | Nested<T>>;
-
 export const walk = async (dir: string): Promise<Nested<string>> => {
   const files = await fs.promises.readdir(dir);
   const filesInDepth: Nested<string> = await Promise.all(
@@ -196,13 +195,3 @@ export const walk = async (dir: string): Promise<Nested<string>> => {
   );
   return filesInDepth;
 };
-
-/* eslint-disable */
-
-export class FsHelper {
-  readCsv = async (loc: string): Promise<string[][]> => {
-    return [];
-  };
-
-  writeCsv = async <T>(loc: string, arr: T[][]): Promise<void> => {};
-}

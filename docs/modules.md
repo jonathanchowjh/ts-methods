@@ -1,19 +1,16 @@
-[ts-methods](README.md) / Exports
+[ts-methods](README.md) / Modules
 
 # ts-methods
 
 ## Table of contents
 
-### Variables
+### Modules
 
-- [default](modules.md#default)
-
-## Variables
-
-### default
-
-• **default**: `Object`
-
-#### Defined in
-
-[index.ts:1](https://github.com/jonathanchowjh/ts-utils/blob/4ebef0f/src/index.ts#L1)
+- [error](modules/error.md)
+- [fs](modules/fs.md)
+- [github](modules/github.md)
+- [net](modules/net.md)
+- [os](modules/os.md)
+- [repl](modules/repl.md)
+- [structs](modules/structs.md)
+- [types](modules/types.md)

@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[index.ts:1](https://github.com/jonathanchowjh/ts-utils/blob/905168b/src/index.ts#L1)
+[index.ts:1](https://github.com/jonathanchowjh/ts-utils/blob/ae1a1c1/src/index.ts#L1)

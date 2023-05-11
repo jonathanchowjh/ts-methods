@@ -2,326 +2,200 @@ ts-methods / [Exports](modules.md)
 
 # ts-methods
 
+ts-methods is a typescript scripting library with useful utility functions including error and file handling, terminal executions, data structures, REPLs, utility types, github clone scripts, and more. The following is a list of helpers and how to use them:
+
+- [Error Helpers](###Error-Helpers)
+- [File Helpers](###File-Helpers)
+- [Structs Helpers (data structures)](###Structs-Helpers)
+- [Type Helpers](###Type-Helpers)
+- [OS Helpers (terminal execution)](###OS-Helpers)
+- [REPL Helpers](###REPL-Helpers)
+- [Net Helpers](###Net-Helpers)
+- [Github Helpers](###Github-Helpers)
+
 ### Installation
 
 ```shell
 npm i ts-methods
 ```
 
-### Usage
+### Error Helpers
 
 ```ts
-import methods from "ts-methods";
+import { UtilsError, catchError } from "ts-methods/dist/src/error";
 
-const {
-  jsonSave,
-  jsonRead,
-  readLine,
-  readLineSelect,
-  ErrorDefault,
-  filePathExists,
-  filePathCreate,
-  filePathRead,
-  filePathRoot,
-  pathResolve,
-} = methods;
+const addFunc = (a: number, b: number) => a + b;
+const throwUtilsError = (msg?: string): void => {
+  const message = msg ?? "sample error";
+  throw new UtilsError(message);
+};
 
 const main = async () => {
-  // Example: json file save
-  await jsonSave(
-    "addresses",
-    "goerli-utility",
-    "0x65B165C17a8660e84e4427c4024fcB784577AB05"
+  // Catch Thrown Error
+  await catchError<ReturnType<typeof throwUtilsError>>(() =>
+    throwUtilsError("error1")
   );
-  const ret: string = (await jsonRead("addresses", "goerli-utility")) as string;
+  await catchError<ReturnType<typeof addFunc>>(
+    () => addFunc(5, 2) // Output: 7
+  );
+};
 
-  // Example: readline
-  const name1: string = await readLine("What is your name: ");
-  const name2: string = await readLineSelect("What is your name: ", [
-    "Alice",
-    "Bryan",
-    "Sam",
-  ]);
-  if (name1 === name2) throw ErrorDefault("same name error");
+main().then((val) => console.log(val));
+```
 
-  // Example: create file
-  try {
-    await filePathExists(filePathRoot(), "ts-methods.json"); // throws error
-  } catch (err: unknown) {
-    await filePathCreate(filePathRoot(), "ts-methods.json"); // throws error
-    const filePath: string[] = await filePathRead(
-      pathResolve(filePathRoot(), ""),
-      "ts-methods.json"
-    );
+### File Helpers
+
+```ts
+import {
+  CONSTANTS,
+  pathExists,
+  pathCreate,
+  root,
+  writeJson2D,
+  readJson2D,
+} from "../src/fs";
+
+const main = async () => {
+  // Create File / Path
+  if (!(await pathExists(await root(CONSTANTS)))) {
+    await pathCreate(await root(CONSTANTS), true);
+  }
+  // 2D JSON
+  const written2 = await writeJson2D(
+    await root(CONSTANTS),
+    "key1",
+    "key2",
+    "value"
+  );
+  if (!written2) {
+    console.log("Not Written 2D json");
+  } else {
+    console.log(await readJson2D(await root(CONSTANTS), "key1", "key2"));
   }
 };
 
-main()
-  .then((val) => console.log(val))
-  .catch((err) => console.error(err));
+main().then((val) => console.log(val));
 ```
 
-## Documentation
-
-[FULL DOCUMENTATION](https://github.com/jonathanchowjh/ts-methods/docs/modules.md)
-
-▸ **ErrorDefault**(`error`): [`UtilsError`](classes/UtilsError.md)
-
-Returns Error based on function name of calling contract
-
-**`Example`**
+### Structs Helpers
 
 ```ts
-throw ErrorDefault("Error Message");
+import structs from "../src/structs";
+
+const main = async () => {
+  // Priority Queue
+  const pq = new structs.PriorityQueue<string>();
+  pq.enqueue("item1", 2);
+  pq.enqueue("item2", 1);
+  pq.enqueue("item3", 3);
+
+  console.log(pq.dequeue()); // Output: item2
+  console.log(pq.dequeue()); // Output: item1
+  console.log(pq.dequeue()); // Output: item3
+
+  // Doubly Linked List
+  const list = new structs.DoublyLinkedList<number>();
+  // HashMap
+  const map = new structs.HashMap<string, number>();
+};
+
+main().then((val) => console.log(val));
 ```
 
-#### Parameters
-
-| Name    | Type     | Description      |
-| :------ | :------- | :--------------- |
-| `error` | `string` | message of error |
-
-▸ **filePathCreate**(`root`, `location`, `isAllFolders?`): `Promise`<`void`\>
-
-Creates dir and file if does not exists
-
-**`Example`**
+### Type Helpers
 
 ```ts
-await filePathCreate(filePathRoot(), "artifacts/json/constants.json");
+import {
+  Expect,
+  Equal,
+  NotEqual,
+  IsAny,
+  NotAny,
+  doNotExecute,
+} from "../src/types";
+
+const main = async () => {
+  doNotExecute(async () => {
+    const anyType: any = 0;
+    const numType: number = 0;
+    const strType: string = "";
+    // @ts-expect-error
+    type test1 = [Expect<Equal<1, 2>>];
+    type test2 = [Expect<Equal<1, 1>>];
+    type test3 = [Expect<NotEqual<1, 2>>];
+    type test4 = [Expect<IsAny<typeof anyType>>];
+    type test5 = [Expect<NotAny<typeof numType>>];
+  });
+};
+
+main().then((val) => console.log(val));
 ```
 
-#### Parameters
-
-| Name            | Type      | Description                                         |
-| :-------------- | :-------- | :-------------------------------------------------- |
-| `root`          | `string`  | root folder (path that has been confirmed to exist) |
-| `location`      | `string`  | location to check if exist                          |
-| `isAllFolders?` | `boolean` | -                                                   |
-
-▸ **filePathExists**(`root`, `location`): `Promise`<`void`\>
-
-Throws Error if folder does not exists
-
-**`Example`**
+### OS Helpers
 
 ```ts
-await filePathExists(filePathRoot(), "artifacts/json/constants.json");
+import {
+  execute,
+  catchExecute,
+  safeExecute,
+  uname,
+  unameExecute,
+} from "../src/os";
+
+const main = async () => {
+  // Execute
+  console.log(await execute("echo me")); // Output: { stdout: "me", stderr: "" }
+  console.log(await catchExecute("echo me")); // Output: { stdout: "me", stderr: "" }
+  console.log(await safeExecute("echo me")); // Output: "me"
+
+  // Uname
+  console.log(await uname()); // Output: "Mac"
+  console.log(await unameExecute({ Mac: "ls" })());
+};
+
+main().then((val) => console.log(val));
 ```
 
-#### Parameters
-
-| Name       | Type     | Description                                         |
-| :--------- | :------- | :-------------------------------------------------- |
-| `root`     | `string` | root folder (path that has been confirmed to exist) |
-| `location` | `string` | location to check if exist                          |
-
-▸ **filePathRead**(`currentDirPath`, `fileName`): `Promise`<`string`[]\>
-
-Getting File Path from Folder
-
-**`Example`**
+### REPL Helpers
 
 ```ts
-await filePathRead(path.resolve(filePathRoot(), "artifacts"), "Utility");
+import { readLine, readLineSelect, REPL } from "../src/repl";
+
+class Chat extends REPL {
+  constructor() {
+    super("Enter Text: ", true);
+  }
+  override default(cmds: string[]): void {
+    console.log(cmds);
+  }
+  edit(cmds: string[]): void {
+    if (cmds.length < 3) return;
+    const second = cmds[1];
+    const third = cmds[2];
+    if (second != "question") return;
+    this.question = third;
+  }
+}
+
+export const main = async () => {
+  console.log(await readLine("Question 1: "));
+  console.log(await readLineSelect("Question 2: ", ["boy", "girl"]));
+  new Chat();
+};
+
+main().then((val) => console.log(val));
 ```
 
-#### Parameters
-
-| Name             | Type     | Description                                    |
-| :--------------- | :------- | :--------------------------------------------- |
-| `currentDirPath` | `string` | folder location                                |
-| `fileName`       | `string` | name of file (eg. 'Utility' given Utility.sol) |
-
-▸ **filePathRoot**(): `string`
-
-Get filePathRoot absolute path
-
-**`Example`**
+### Github Helpers
 
 ```ts
-filePathRoot();
+import { GithubREPL, gitRepoUrlAdd, cloneAll } from "../src/github";
+
+const main = async () => {
+  await gitRepoUrlAdd();
+  await cloneAll();
+  new GithubREPL();
+};
+
+main().then((val) => console.log(val));
 ```
-
-▸ **filePathWalk**(`dir`): `Promise`<`string`[]\>
-
-Get all files from a given parent directory
-
-**`Example`**
-
-```ts
-await filePathWalk(path.resolve(filePathRoot(), "artifacts"));
-```
-
-#### Parameters
-
-| Name  | Type     | Description     |
-| :---- | :------- | :-------------- |
-| `dir` | `string` | folder location |
-
-▸ **filterKeys**(`obj`, `str`): `Object`
-
-Filter Object by its key value
-
-**`Example`**
-
-```ts
-filterKeys(
-   {
-     'goerli-utility': ''
-     'localhost-utility': ''
-   },
-   'goerli'
-);
-```
-
-#### Parameters
-
-| Name  | Type     | Description              |
-| :---- | :------- | :----------------------- |
-| `obj` | `Object` | Object to filter through |
-| `str` | `string` | Value to filter by       |
-
-▸ **jsonRead**(`type?`, `name?`, `file?`): `Promise`<`undefined` \| `string` \| { `[k: string]`: `any`; }\>
-
-This reads json file given type and name
-
-**`Example`**
-
-```ts
-await jsonRead("addresses", "goerli-utility");
-```
-
-#### Parameters
-
-| Name    | Type     | Description                                        |
-| :------ | :------- | :------------------------------------------------- |
-| `type?` | `string` | (Optional) Type of saved data (eg. addresses)      |
-| `name?` | `string` | (Optional) Name of saved data (eg. goerli-utility) |
-| `file?` | `string` | (Optional) File that data is saved in              |
-
-▸ **jsonReadFull**(`file?`): `Promise`<{ `[k: string]`: `any`; }\>
-
-Parsed JSON given file (absolute path / relative path to root)
-
-**`Example`**
-
-```ts
-await jsonReadFull("utils/json/constants.json");
-```
-
-#### Parameters
-
-| Name    | Type     |
-| :------ | :------- |
-| `file?` | `string` |
-
-▸ **jsonSave**(`type`, `name`, `value`, `file?`): `Promise`<`void`\>
-
-This saves to json file given type, name, and value
-
-**`Example`**
-
-```ts
-await jsonSave(
-  "addresses",
-  "goerli-utility",
-  "0x65B165C17a8660e84e4427c4024fcB784577AB05"
-);
-```
-
-#### Parameters
-
-| Name    | Type     | Description                                                          |
-| :------ | :------- | :------------------------------------------------------------------- |
-| `type`  | `string` | Type of saved data (eg. addresses)                                   |
-| `name`  | `string` | Name of saved data (eg. goerli-utility)                              |
-| `value` | `string` | Value of saved data (eg. 0x65B165C17a8660e84e4427c4024fcB784577AB05) |
-| `file?` | `string` | (Optional) File that data is saved in                                |
-
-▸ **jsonSaveFull**(`obj`, `file?`): `Promise`<`void`\>
-
-This saves to json file full
-
-**`Example`**
-
-```ts
-await jsonSaveFull({ addresses: { key: "value" } });
-```
-
-#### Parameters
-
-| Name    | Type     | Description                           |
-| :------ | :------- | :------------------------------------ |
-| `obj`   | `Object` | Object to save                        |
-| `file?` | `string` | (Optional) File that data is saved in |
-
-▸ **readLine**(`question`): `Promise`<`string`\>
-
-readline question from terminal
-
-**`Example`**
-
-```ts
-const name: string = await readLine("What is your name: ");
-```
-
-#### Parameters
-
-| Name       | Type     | Description                                   |
-| :--------- | :------- | :-------------------------------------------- |
-| `question` | `string` | question prompt before waiting for user input |
-
-▸ **readLineSelect**(`question`, `select`): `Promise`<`string`\>
-
-readline question from terminal with selection
-
-**`Example`**
-
-```ts
-const name: string = await readLineSelect("What is your name: ", [
-  "Alice",
-  "Bryan",
-  "Sam",
-]);
-```
-
-#### Parameters
-
-| Name       | Type       | Description                                   |
-| :--------- | :--------- | :-------------------------------------------- |
-| `question` | `string`   | question prompt before waiting for user input |
-| `select`   | `string`[] | question prompt before waiting for user input |
-
-▸ **stackTrace**(`fullTrace?`, `withLocation?`): `any`
-
-Returns stack trace of previous function
-
-**`Example`**
-
-```ts
-stackTrace(true, true);
-```
-
-#### Parameters
-
-| Name            | Type      |
-| :-------------- | :-------- |
-| `fullTrace?`    | `boolean` |
-| `withLocation?` | `boolean` |
-
-▸ **timeout**(`ms`): `Promise`<`void`\>
-
-Promise that waits for given number of milliseconds
-
-**`Example`**
-
-```ts
-await timeout(1000);
-```
-
-#### Parameters
-
-| Name | Type     | Description              |
-| :--- | :------- | :----------------------- |
-| `ms` | `number` | milliseconds to wait for |

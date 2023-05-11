@@ -1,111 +1,66 @@
 # ts-methods
 
+ts-methods is a typescript scripting library with useful utility functions including error and file handling, terminal executions, data structures, REPLs, utility types, github clone scripts, and more. The following is a list of helpers and how to use them:
+
+- [Error Helpers](###Error-Helpers)
+- [File Helpers](###File-Helpers)
+- [Structs Helpers (data structures)](###Structs-Helpers)
+- [Type Helpers](###Type-Helpers)
+- [OS Helpers (terminal execution)](###OS-Helpers)
+- [REPL Helpers](###REPL-Helpers)
+- [Net Helpers](###Net-Helpers)
+- [Github Helpers](###Github-Helpers)
+
 ### Installation
 
 ```shell
 npm i ts-methods
 ```
 
-### Usage
+### Error Helpers
 
 ```ts
-import "ts-methods/dist/src/ts-reset";
-import {} from "ts-methods/dist/src/error";
-import {} from "ts-methods/dist/src/fs";
-import {} from "ts-methods/dist/src/net";
-import {} from "ts-methods/dist/src/os";
-import {} from "ts-methods/dist/src/repl";
+import { UtilsError, catchError } from "ts-methods/dist/src/error";
 
-const {
-  jsonSave,
-  jsonRead,
-  readLine,
-  readLineSelect,
-  ErrorDefault,
-  filePathExists,
-  filePathCreate,
-  filePathRead,
-  filePathRoot,
-  pathResolve,
-} = methods;
-
-const main = async () => {
-  // Example: json file save
-  await jsonSave(
-    "addresses",
-    "goerli-utility",
-    "0x65B165C17a8660e84e4427c4024fcB784577AB05"
-  );
-  const ret: string = (await jsonRead("addresses", "goerli-utility")) as string;
-
-  // Example: readline
-  const name1: string = await readLine("What is your name: ");
-  const name2: string = await readLineSelect("What is your name: ", [
-    "Alice",
-    "Bryan",
-    "Sam",
-  ]);
-  if (name1 === name2) throw ErrorDefault("same name error");
-
-  // Example: create file
-  try {
-    await filePathExists(filePathRoot(), "ts-methods.json"); // throws error
-  } catch (err: unknown) {
-    await filePathCreate(filePathRoot(), "ts-methods.json"); // throws error
-    const filePath: string[] = await filePathRead(
-      pathResolve(filePathRoot(), ""),
-      "ts-methods.json"
-    );
-  }
+const addFunc = (a: number, b: number) => a + b;
+const throwUtilsError = (msg?: string): void => {
+  const message = msg ?? "sample error";
+  throw new UtilsError(message);
 };
 
-main()
-  .then((val) => console.log(val))
-  .catch((err) => console.error(err));
+const main = async () => {
+  // Catch Thrown Error
+  await catchError<ReturnType<typeof throwUtilsError>>(() =>
+    throwUtilsError("error1")
+  );
+  await catchError<ReturnType<typeof addFunc>>(
+    () => addFunc(5, 2) // Output: 7
+  );
+};
+
+main().then((val) => console.log(val));
 ```
 
-### fs
+### File Helpers
 
 ```ts
 import {
-  pathIterate,
+  CONSTANTS,
   pathExists,
   pathCreate,
-  pathFind,
-  rootDefault,
   root,
-  writeJson,
-  readJson,
   writeJson2D,
   readJson2D,
 } from "../src/fs";
 
 const main = async () => {
-  // ROOT and WALK
-  console.log(await rootDefault());
-  console.log(await root("scripts/sample.json"));
-
   // Create File / Path
-  await pathIterate(await rootDefault(), true, async (p, c) => 0);
-  await pathCreate(await root("scripts/sample.json"), true);
-  console.log(await pathFind(await rootDefault(), `sample.json`));
-  console.log(
-    `sample.json exists: ${await pathExists(await root("scripts/sample.json"))}`
-  );
-
-  // JSON
-  const written1 = await writeJson(await root("scripts/sample.json"), {
-    sample: "words",
-  });
-  if (!written1) {
-    console.log("Not Written json");
-  } else {
-    console.log(await readJson(await root("scripts/sample.json")));
+  if (!(await pathExists(await root(CONSTANTS)))) {
+    await pathCreate(await root(CONSTANTS), true);
   }
-
   // 2D JSON
   const written2 = await writeJson2D(
-    await root("scripts/sample.json"),
+    await root(CONSTANTS),
     "key1",
     "key2",
     "value"
@@ -113,13 +68,132 @@ const main = async () => {
   if (!written2) {
     console.log("Not Written 2D json");
   } else {
-    console.log(
-      await readJson2D(await root("scripts/sample.json"), "key1", "key2")
-    );
+    console.log(await readJson2D(await root(CONSTANTS), "key1", "key2"));
   }
 };
 
-main()
-  .then((val) => console.log(val))
-  .catch((err) => console.log(err));
+main().then((val) => console.log(val));
+```
+
+### Structs Helpers
+
+```ts
+import structs from "../src/structs";
+
+const main = async () => {
+  // Priority Queue
+  const pq = new structs.PriorityQueue<string>();
+  pq.enqueue("item1", 2);
+  pq.enqueue("item2", 1);
+  pq.enqueue("item3", 3);
+
+  console.log(pq.dequeue()); // Output: item2
+  console.log(pq.dequeue()); // Output: item1
+  console.log(pq.dequeue()); // Output: item3
+
+  // Doubly Linked List
+  const list = new structs.DoublyLinkedList<number>();
+  // HashMap
+  const map = new structs.HashMap<string, number>();
+};
+
+main().then((val) => console.log(val));
+```
+
+### Type Helpers
+
+```ts
+import {
+  Expect,
+  Equal,
+  NotEqual,
+  IsAny,
+  NotAny,
+  doNotExecute,
+} from "../src/types";
+
+const main = async () => {
+  doNotExecute(async () => {
+    const anyType: any = 0;
+    const numType: number = 0;
+    const strType: string = "";
+    // @ts-expect-error
+    type test1 = [Expect<Equal<1, 2>>];
+    type test2 = [Expect<Equal<1, 1>>];
+    type test3 = [Expect<NotEqual<1, 2>>];
+    type test4 = [Expect<IsAny<typeof anyType>>];
+    type test5 = [Expect<NotAny<typeof numType>>];
+  });
+};
+
+main().then((val) => console.log(val));
+```
+
+### OS Helpers
+
+```ts
+import {
+  execute,
+  catchExecute,
+  safeExecute,
+  uname,
+  unameExecute,
+} from "../src/os";
+
+const main = async () => {
+  // Execute
+  console.log(await execute("echo me")); // Output: { stdout: "me", stderr: "" }
+  console.log(await catchExecute("echo me")); // Output: { stdout: "me", stderr: "" }
+  console.log(await safeExecute("echo me")); // Output: "me"
+
+  // Uname
+  console.log(await uname()); // Output: "Mac"
+  console.log(await unameExecute({ Mac: "ls" })());
+};
+
+main().then((val) => console.log(val));
+```
+
+### REPL Helpers
+
+```ts
+import { readLine, readLineSelect, REPL } from "../src/repl";
+
+class Chat extends REPL {
+  constructor() {
+    super("Enter Text: ", true);
+  }
+  override default(cmds: string[]): void {
+    console.log(cmds);
+  }
+  edit(cmds: string[]): void {
+    if (cmds.length < 3) return;
+    const second = cmds[1];
+    const third = cmds[2];
+    if (second != "question") return;
+    this.question = third;
+  }
+}
+
+export const main = async () => {
+  console.log(await readLine("Question 1: "));
+  console.log(await readLineSelect("Question 2: ", ["boy", "girl"]));
+  new Chat();
+};
+
+main().then((val) => console.log(val));
+```
+
+### Github Helpers
+
+```ts
+import { GithubREPL, gitRepoUrlAdd, cloneAll } from "../src/github";
+
+const main = async () => {
+  await gitRepoUrlAdd();
+  await cloneAll();
+  new GithubREPL();
+};
+
+main().then((val) => console.log(val));
 ```

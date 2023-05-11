@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { UtilsError, catchError } from "./error";
 
+export const CONSTANTS = "constants.json";
 export type Nested<T> = Array<T | Nested<T>>;
 export type NestedArray = Array<NestedArray | string | number>;
 export type NestedObject = {

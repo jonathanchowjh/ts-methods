@@ -1,5 +1,6 @@
 import { catchExecute, execute } from "./os";
 import {
+  CONSTANTS,
   writeJson,
   writeJson2D,
   readJson2D,
@@ -16,7 +17,7 @@ import { UtilsError } from "./error";
 /* eslint-disable class-methods-use-this */
 
 export const STORAGE = "storage";
-export const CONSTANTS = "constants.json";
+export const LINK_KEY = "links";
 
 export class GithubREPL {
   constructor() {
@@ -107,7 +108,7 @@ export const gitRepoUrlAdd = async () => {
   // write to file
   await writeJson2D(
     FILE,
-    "links",
+    LINK_KEY,
     answer.replace("git@github.com:", "").replace(".git", ""),
     answer
   );
@@ -116,7 +117,7 @@ export const gitRepoUrlAdd = async () => {
 
 export const gitRepoUrlRead = async () => {
   const FILE = await root(CONSTANTS);
-  const links: { [k: string]: string } = (await readJson2D(FILE, "links")) as {
+  const links: { [k: string]: string } = (await readJson2D(FILE, LINK_KEY)) as {
     [k: string]: string;
   };
   return links;
@@ -127,7 +128,7 @@ export const gitRepoUrlDelete = async () => {
   const keys = Object.keys(links);
   const selected = await readLineSelect("Enter index of Deleted Entry: ", keys);
   const FILE = await root(CONSTANTS);
-  await writeJson2D(FILE, "links", selected, "\\DELETE");
+  await writeJson2D(FILE, LINK_KEY, selected, "\\DELETE");
   delete links[selected];
   return links;
 };

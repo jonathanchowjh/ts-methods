@@ -9,6 +9,7 @@ npm i ts-methods
 ### Usage
 
 ```ts
+import "ts-methods/dist/src/ts-reset";
 import {} from "ts-methods/dist/src/error";
 import {} from "ts-methods/dist/src/fs";
 import {} from "ts-methods/dist/src/net";

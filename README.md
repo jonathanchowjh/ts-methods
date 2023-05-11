@@ -1,6 +1,6 @@
 # ts-methods
 
-ts-methods is a typescript scripting library with useful utility functions including error and file handling, terminal executions, data structures, REPLs, utility types, github clone scripts, and more. The following is a list of helpers and how to use them:
+ts-methods is a typescript scripting library with utility functions including error and file handling, terminal executions, data structures, REPLs, utility types, github clone scripts, and more. The following is a list of helpers and how to use them:
 
 - [Error Helpers](###Error-Helpers)
 - [File Helpers](###File-Helpers)
@@ -33,7 +33,7 @@ const main = async () => {
   await catchError<ReturnType<typeof throwUtilsError>>(() =>
     throwUtilsError("error1")
   );
-  await catchError<ReturnType<typeof addFunc>>(
+  const sum = await catchError<ReturnType<typeof addFunc>>(
     () => addFunc(5, 2) // Output: 7
   );
 };

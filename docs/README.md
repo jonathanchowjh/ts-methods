@@ -4,14 +4,14 @@ ts-methods / [Modules](modules.md)
 
 ts-methods is a typescript scripting library with utility functions including error and file handling, terminal executions, data structures, REPLs, utility types, github clone scripts, and more. The following is a list of helpers and how to use them:
 
-- [Error Helpers](###Error-Helpers)
-- [File Helpers](###File-Helpers)
-- [Structs Helpers (data structures)](###Structs-Helpers)
-- [Type Helpers](###Type-Helpers)
-- [OS Helpers (terminal execution)](###OS-Helpers)
-- [REPL Helpers](###REPL-Helpers)
-- [Net Helpers](###Net-Helpers)
-- [Github Helpers](###Github-Helpers)
+- [Error Helpers](#Error-Helpers)
+- [File Helpers](#File-Helpers)
+- [Structs Helpers (data structures)](#Structs-Helpers)
+- [Type Helpers](#Type-Helpers)
+- [OS Helpers (terminal execution)](#OS-Helpers)
+- [REPL Helpers](#REPL-Helpers)
+- [Net Helpers](#Net-Helpers)
+- [Github Helpers](#Github-Helpers)
 
 ### Installation
 

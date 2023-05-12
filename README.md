@@ -17,7 +17,7 @@ ts-methods is a typescript scripting library with an array of utility functions;
 npm i ts-methods
 
 # Optional: Global Type Edits and reset
-# Add (types/global.d.ts) to the include statement of tsconfig.json
+# Add "types/global.d.ts" to the (include array in tsconfig.json)
 rm -rf types && mkdir types
 cp -r node_modules/ts-methods/dist/global types/global.d.ts
 ```

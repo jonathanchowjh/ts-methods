@@ -1,10 +1,12 @@
 /* eslint-disable no-unused-vars */
 
 declare namespace TSReset {
+  // @ts-expect-error
   type NonFalsy<T> = T extends false | 0 | "" | null | undefined | 0n
     ? never
     : T;
 
+  // @ts-expect-error
   type WidenLiteral<T> = T extends string
     ? string
     : T extends number

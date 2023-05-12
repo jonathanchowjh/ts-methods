@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[src/error.ts:47](https://github.com/jonathanchowjh/ts-utils/blob/14d6a32/src/error.ts#L47)
+[src/error.ts:47](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/error.ts#L47)
 
 ---
 
@@ -62,7 +62,7 @@ error is Error
 
 #### Defined in
 
-[src/error.ts:74](https://github.com/jonathanchowjh/ts-utils/blob/14d6a32/src/error.ts#L74)
+[src/error.ts:74](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/error.ts#L74)
 
 ---
 
@@ -82,7 +82,7 @@ error is Error
 
 #### Defined in
 
-[src/error.ts:70](https://github.com/jonathanchowjh/ts-utils/blob/14d6a32/src/error.ts#L70)
+[src/error.ts:70](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/error.ts#L70)
 
 ---
 
@@ -104,7 +104,7 @@ error is Error
 
 #### Defined in
 
-[src/error.ts:21](https://github.com/jonathanchowjh/ts-utils/blob/14d6a32/src/error.ts#L21)
+[src/error.ts:21](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/error.ts#L21)
 
 ---
 
@@ -124,4 +124,4 @@ error is Error
 
 #### Defined in
 
-[src/error.ts:81](https://github.com/jonathanchowjh/ts-utils/blob/14d6a32/src/error.ts#L81)
+[src/error.ts:81](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/error.ts#L81)

@@ -10,16 +10,12 @@ ts-methods is a typescript scripting library with an array of utility functions;
 - [REPL Helpers](#REPL-Helpers)
 - [Net Helpers](#Net-Helpers)
 - [Github Helpers](#Github-Helpers)
+- [Global Helpers](#Global-Helpers)
 
 ### Installation
 
 ```shell
 npm i ts-methods
-
-# Optional: Global Type Edits and reset
-# Add "types/global.d.ts" to the (include array in tsconfig.json)
-rm -rf types && mkdir types
-cp -r node_modules/ts-methods/dist/global.d.ts types/global.d.ts
 ```
 
 ### Error Helpers
@@ -201,4 +197,12 @@ const main = async () => {
 };
 
 main().then((val) => console.log(val));
+```
+
+### Global Helpers
+
+```sh
+# Add "types/global.d.ts" to the (include array in tsconfig.json)
+rm -rf types && mkdir types
+cp -r node_modules/ts-methods/dist/global.d.ts types/global.d.ts
 ```

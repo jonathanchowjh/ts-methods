@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[src/fs.ts:6](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/fs.ts#L6)
+[src/fs.ts:6](https://github.com/jonathanchowjh/ts-utils/blob/85c7e3b/src/fs.ts#L6)
 
 ---
 
@@ -56,7 +56,7 @@
 
 #### Defined in
 
-[src/fs.ts:7](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/fs.ts#L7)
+[src/fs.ts:7](https://github.com/jonathanchowjh/ts-utils/blob/85c7e3b/src/fs.ts#L7)
 
 ---
 
@@ -70,7 +70,7 @@
 
 #### Defined in
 
-[src/fs.ts:8](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/fs.ts#L8)
+[src/fs.ts:8](https://github.com/jonathanchowjh/ts-utils/blob/85c7e3b/src/fs.ts#L8)
 
 ## Variables
 
@@ -80,7 +80,7 @@
 
 #### Defined in
 
-[src/fs.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/fs.ts#L5)
+[src/fs.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/85c7e3b/src/fs.ts#L5)
 
 ## Functions
 
@@ -106,7 +106,7 @@
 
 #### Defined in
 
-[src/fs.ts:184](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/fs.ts#L184)
+[src/fs.ts:184](https://github.com/jonathanchowjh/ts-utils/blob/85c7e3b/src/fs.ts#L184)
 
 ---
 
@@ -127,7 +127,7 @@
 
 #### Defined in
 
-[src/fs.ts:121](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/fs.ts#L121)
+[src/fs.ts:121](https://github.com/jonathanchowjh/ts-utils/blob/85c7e3b/src/fs.ts#L121)
 
 ---
 
@@ -147,7 +147,7 @@
 
 #### Defined in
 
-[src/fs.ts:135](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/fs.ts#L135)
+[src/fs.ts:135](https://github.com/jonathanchowjh/ts-utils/blob/85c7e3b/src/fs.ts#L135)
 
 ---
 
@@ -168,7 +168,7 @@
 
 #### Defined in
 
-[src/fs.ts:174](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/fs.ts#L174)
+[src/fs.ts:174](https://github.com/jonathanchowjh/ts-utils/blob/85c7e3b/src/fs.ts#L174)
 
 ---
 
@@ -196,7 +196,7 @@
 
 #### Defined in
 
-[src/fs.ts:147](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/fs.ts#L147)
+[src/fs.ts:147](https://github.com/jonathanchowjh/ts-utils/blob/85c7e3b/src/fs.ts#L147)
 
 ---
 
@@ -216,7 +216,7 @@
 
 #### Defined in
 
-[src/fs.ts:77](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/fs.ts#L77)
+[src/fs.ts:77](https://github.com/jonathanchowjh/ts-utils/blob/85c7e3b/src/fs.ts#L77)
 
 ---
 
@@ -242,7 +242,7 @@
 
 #### Defined in
 
-[src/fs.ts:53](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/fs.ts#L53)
+[src/fs.ts:53](https://github.com/jonathanchowjh/ts-utils/blob/85c7e3b/src/fs.ts#L53)
 
 ---
 
@@ -264,7 +264,7 @@
 
 #### Defined in
 
-[src/fs.ts:17](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/fs.ts#L17)
+[src/fs.ts:17](https://github.com/jonathanchowjh/ts-utils/blob/85c7e3b/src/fs.ts#L17)
 
 ---
 
@@ -284,7 +284,7 @@
 
 #### Defined in
 
-[src/fs.ts:101](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/fs.ts#L101)
+[src/fs.ts:101](https://github.com/jonathanchowjh/ts-utils/blob/85c7e3b/src/fs.ts#L101)
 
 ---
 
@@ -298,7 +298,7 @@
 
 #### Defined in
 
-[src/fs.ts:104](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/fs.ts#L104)
+[src/fs.ts:104](https://github.com/jonathanchowjh/ts-utils/blob/85c7e3b/src/fs.ts#L104)
 
 ---
 
@@ -312,7 +312,7 @@
 
 #### Defined in
 
-[src/fs.ts:109](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/fs.ts#L109)
+[src/fs.ts:109](https://github.com/jonathanchowjh/ts-utils/blob/85c7e3b/src/fs.ts#L109)
 
 ---
 
@@ -332,7 +332,7 @@
 
 #### Defined in
 
-[src/fs.ts:186](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/fs.ts#L186)
+[src/fs.ts:186](https://github.com/jonathanchowjh/ts-utils/blob/85c7e3b/src/fs.ts#L186)
 
 ---
 
@@ -353,7 +353,7 @@
 
 #### Defined in
 
-[src/fs.ts:89](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/fs.ts#L89)
+[src/fs.ts:89](https://github.com/jonathanchowjh/ts-utils/blob/85c7e3b/src/fs.ts#L89)
 
 ---
 
@@ -380,7 +380,7 @@
 
 #### Defined in
 
-[src/fs.ts:66](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/fs.ts#L66)
+[src/fs.ts:66](https://github.com/jonathanchowjh/ts-utils/blob/85c7e3b/src/fs.ts#L66)
 
 ---
 
@@ -403,4 +403,4 @@
 
 #### Defined in
 
-[src/fs.ts:34](https://github.com/jonathanchowjh/ts-utils/blob/e040cfc/src/fs.ts#L34)
+[src/fs.ts:34](https://github.com/jonathanchowjh/ts-utils/blob/85c7e3b/src/fs.ts#L34)

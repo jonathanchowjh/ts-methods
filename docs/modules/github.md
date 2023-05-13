@@ -35,7 +35,7 @@
 
 #### Defined in
 
-[src/github.ts:20](https://github.com/jonathanchowjh/ts-utils/blob/bd4a743/src/github.ts#L20)
+[src/github.ts:20](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/github.ts#L20)
 
 ---
 
@@ -45,7 +45,7 @@
 
 #### Defined in
 
-[src/github.ts:19](https://github.com/jonathanchowjh/ts-utils/blob/bd4a743/src/github.ts#L19)
+[src/github.ts:19](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/github.ts#L19)
 
 ## Functions
 
@@ -65,7 +65,7 @@
 
 #### Defined in
 
-[src/github.ts:294](https://github.com/jonathanchowjh/ts-utils/blob/bd4a743/src/github.ts#L294)
+[src/github.ts:294](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/github.ts#L294)
 
 ---
 
@@ -85,7 +85,7 @@
 
 #### Defined in
 
-[src/github.ts:281](https://github.com/jonathanchowjh/ts-utils/blob/bd4a743/src/github.ts#L281)
+[src/github.ts:281](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/github.ts#L281)
 
 ---
 
@@ -105,7 +105,7 @@
 
 #### Defined in
 
-[src/github.ts:305](https://github.com/jonathanchowjh/ts-utils/blob/bd4a743/src/github.ts#L305)
+[src/github.ts:305](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/github.ts#L305)
 
 ---
 
@@ -126,7 +126,7 @@
 
 #### Defined in
 
-[src/github.ts:233](https://github.com/jonathanchowjh/ts-utils/blob/bd4a743/src/github.ts#L233)
+[src/github.ts:233](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/github.ts#L233)
 
 ---
 
@@ -140,7 +140,7 @@
 
 #### Defined in
 
-[src/github.ts:176](https://github.com/jonathanchowjh/ts-utils/blob/bd4a743/src/github.ts#L176)
+[src/github.ts:176](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/github.ts#L176)
 
 ---
 
@@ -154,7 +154,7 @@
 
 #### Defined in
 
-[src/github.ts:204](https://github.com/jonathanchowjh/ts-utils/blob/bd4a743/src/github.ts#L204)
+[src/github.ts:204](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/github.ts#L204)
 
 ---
 
@@ -168,7 +168,7 @@
 
 #### Defined in
 
-[src/github.ts:144](https://github.com/jonathanchowjh/ts-utils/blob/bd4a743/src/github.ts#L144)
+[src/github.ts:144](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/github.ts#L144)
 
 ---
 
@@ -182,7 +182,7 @@
 
 #### Defined in
 
-[src/github.ts:98](https://github.com/jonathanchowjh/ts-utils/blob/bd4a743/src/github.ts#L98)
+[src/github.ts:98](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/github.ts#L98)
 
 ---
 
@@ -196,7 +196,7 @@
 
 #### Defined in
 
-[src/github.ts:126](https://github.com/jonathanchowjh/ts-utils/blob/bd4a743/src/github.ts#L126)
+[src/github.ts:126](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/github.ts#L126)
 
 ---
 
@@ -210,7 +210,7 @@
 
 #### Defined in
 
-[src/github.ts:118](https://github.com/jonathanchowjh/ts-utils/blob/bd4a743/src/github.ts#L118)
+[src/github.ts:118](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/github.ts#L118)
 
 ---
 
@@ -230,4 +230,4 @@
 
 #### Defined in
 
-[src/github.ts:136](https://github.com/jonathanchowjh/ts-utils/blob/bd4a743/src/github.ts#L136)
+[src/github.ts:136](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/github.ts#L136)

@@ -1,8 +1,14 @@
 {
   "name": "ts-methods",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "",
   "main": "dist/index.js",
+  "keywords": [
+    "typescript",
+    "scripting",
+    "utility",
+    "testing tools"
+  ],
   "files": [
     "dist"
   ],

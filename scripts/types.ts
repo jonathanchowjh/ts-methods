@@ -12,7 +12,7 @@ import {
   ExpectValidArgs,
   UnionToIntersection,
   doNotExecute,
-} from "../src/test-types";
+} from "../src/types";
 
 /* eslint-disable */
 

@@ -113,7 +113,7 @@ import {
   Alike,
   ExpectExtends,
   doNotExecute,
-} from "../src/test-types";
+} from "../src/types";
 
 export const main = async () => {
   doNotExecute(async () => {

@@ -48,7 +48,7 @@ Error.constructor
 
 #### Defined in
 
-[src/error.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/c49a02c/src/error.ts#L5)
+[src/error.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/b6a63ae/src/error.ts#L5)
 
 ## Properties
 

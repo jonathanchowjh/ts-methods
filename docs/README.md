@@ -119,9 +119,6 @@ import {
 
 export const main = async () => {
   doNotExecute(async () => {
-    const anyType: any = 0;
-    const numType: number = 0;
-    const strType: string = "";
     type Person = { name: string; age: number };
     type Person1 = { name: string; age: number };
     type Address = { name: string; age: number; street: string };

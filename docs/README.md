@@ -7,7 +7,7 @@ ts-methods is a typescript scripting library with an array of utility functions;
 - [Error Helpers](#Error-Helpers)
 - [File Helpers](#File-Helpers)
 - [Structs Helpers (data structures)](#Structs-Helpers)
-- [Type Helpers](#Type-Helpers)
+- [Test Type Helpers](#Test-Type-Helpers)
 - [OS Helpers (terminal execution)](#OS-Helpers)
 - [REPL Helpers](#REPL-Helpers)
 - [Net Helpers](#Net-Helpers)
@@ -103,29 +103,39 @@ const main = async () => {
 main().then((val) => console.log(val));
 ```
 
-### Type Helpers
+### Test Type Helpers
 
 ```ts
 import {
   Expect,
   Equal,
   NotEqual,
-  IsAny,
-  NotAny,
+  Debug,
+  MergeInsertions,
+  Alike,
+  ExpectExtends,
   doNotExecute,
-} from "ts-methods/dist/types";
+} from "../src/types";
 
-const main = async () => {
+export const main = async () => {
   doNotExecute(async () => {
     const anyType: any = 0;
     const numType: number = 0;
     const strType: string = "";
-    // @ts-expect-error
-    type test1 = [Expect<Equal<1, 2>>];
+    type Person = { name: string; age: number };
+    type Person1 = { name: string; age: number };
+    type Address = { name: string; age: number; street: string };
+
     type test2 = [Expect<Equal<1, 1>>];
     type test3 = [Expect<NotEqual<1, 2>>];
-    type test4 = [Expect<IsAny<typeof anyType>>];
-    type test5 = [Expect<NotAny<typeof numType>>];
+    const test6: Debug<Person> = { name: "John Doe", age: 8 };
+    const test7: MergeInsertions<Person & Address> = {
+      name: "John Doe",
+      age: 9,
+      street: "Cortney Terrace",
+    };
+    type test8 = [Expect<Alike<Person, Person1>>];
+    type test9 = [Expect<ExpectExtends<Person, Address>>];
   });
 };
 

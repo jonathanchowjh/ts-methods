@@ -1,6 +1,7 @@
 import { safeExecute } from "../src/os";
 import { replMain } from "./repl";
 import { githubMain } from "./github";
+import { typesMain } from "./types";
 
 /* eslint-disable */
 
@@ -13,6 +14,8 @@ const main = async () => {
       break;
     case "github":
       await githubMain();
+    case "types":
+      await typesMain();
     default:
       console.log(
         await safeExecute(`npx ts-node scripts/${process.argv[2]}.ts`)

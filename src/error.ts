@@ -67,6 +67,7 @@ export const catchError = async <R>(
   }
 };
 
+// Usage: isNull(null) => true
 export const isNull = (val: any): boolean =>
   val == null && typeof val == "object";
 

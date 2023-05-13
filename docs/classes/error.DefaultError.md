@@ -47,7 +47,7 @@ Error.constructor
 
 #### Defined in
 
-[src/error.ts:14](https://github.com/jonathanchowjh/ts-utils/blob/7ca4bf8/src/error.ts#L14)
+[src/error.ts:14](https://github.com/jonathanchowjh/ts-utils/blob/bd4a743/src/error.ts#L14)
 
 ## Properties
 

@@ -9,7 +9,7 @@ Do read the repository https://github.com/jonathanchowjh/ts-methods to see full 
 - [Error Helpers](#Error-Helpers)
 - [File Helpers](#File-Helpers)
 - [Structs Helpers (data structures)](#Structs-Helpers)
-- [Test Type Helpers](#Test-Type-Helpers)
+- [Type Helpers](#Type-Helpers)
 - [OS Helpers (terminal execution)](#OS-Helpers)
 - [REPL Helpers](#REPL-Helpers)
 - [Net Helpers](#Net-Helpers)
@@ -105,7 +105,7 @@ const main = async () => {
 main().then((val) => console.log(val));
 ```
 
-### Test Type Helpers
+### Type Helpers
 
 ```ts
 import {

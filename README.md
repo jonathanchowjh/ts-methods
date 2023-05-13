@@ -130,7 +130,7 @@ export const main = async () => {
     const test7: MergeInsertions<Person & Address> = {
       name: "John Doe",
       age: 9,
-      street: "9",
+      street: "Cortney Terrace",
     };
     type test8 = [Expect<Alike<Person, Person1>>];
     type test9 = [Expect<ExpectExtends<Person, Address>>];

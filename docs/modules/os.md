@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[src/os.ts:42](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/os.ts#L42)
+[src/os.ts:42](https://github.com/jonathanchowjh/ts-utils/blob/ba2bf6d/src/os.ts#L42)
 
 ---
 
@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[src/os.ts:44](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/os.ts#L44)
+[src/os.ts:44](https://github.com/jonathanchowjh/ts-utils/blob/ba2bf6d/src/os.ts#L44)
 
 ## Functions
 
@@ -57,7 +57,7 @@
 
 #### Defined in
 
-[src/os.ts:16](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/os.ts#L16)
+[src/os.ts:16](https://github.com/jonathanchowjh/ts-utils/blob/ba2bf6d/src/os.ts#L16)
 
 ---
 
@@ -79,7 +79,7 @@ https://www.hostinger.com/tutorials/cron-job
 
 #### Defined in
 
-[src/os.ts:81](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/os.ts#L81)
+[src/os.ts:81](https://github.com/jonathanchowjh/ts-utils/blob/ba2bf6d/src/os.ts#L81)
 
 ---
 
@@ -99,7 +99,7 @@ https://www.hostinger.com/tutorials/cron-job
 
 #### Defined in
 
-[src/os.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/os.ts#L5)
+[src/os.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/ba2bf6d/src/os.ts#L5)
 
 ---
 
@@ -120,7 +120,7 @@ https://www.hostinger.com/tutorials/cron-job
 
 #### Defined in
 
-[src/os.ts:28](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/os.ts#L28)
+[src/os.ts:28](https://github.com/jonathanchowjh/ts-utils/blob/ba2bf6d/src/os.ts#L28)
 
 ---
 
@@ -134,7 +134,7 @@ https://www.hostinger.com/tutorials/cron-job
 
 #### Defined in
 
-[src/os.ts:50](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/os.ts#L50)
+[src/os.ts:50](https://github.com/jonathanchowjh/ts-utils/blob/ba2bf6d/src/os.ts#L50)
 
 ---
 
@@ -161,4 +161,4 @@ https://www.hostinger.com/tutorials/cron-job
 
 #### Defined in
 
-[src/os.ts:62](https://github.com/jonathanchowjh/ts-utils/blob/9de1890/src/os.ts#L62)
+[src/os.ts:62](https://github.com/jonathanchowjh/ts-utils/blob/ba2bf6d/src/os.ts#L62)

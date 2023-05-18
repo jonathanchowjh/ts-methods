@@ -21,7 +21,7 @@ npm i ts-methods
 ### Error Helpers
 
 ```ts
-import { UtilsError, catchError } from "ts-methods/dist/error";
+import { UtilsError, catchError } from "ts-methods/error";
 
 const addFunc = (a: number, b: number) => a + b;
 const throwUtilsError = (msg?: string): void => {
@@ -52,7 +52,7 @@ import {
   root,
   writeJson2D,
   readJson2D,
-} from "ts-methods/dist/fs";
+} from "ts-methods/fs";
 
 const main = async () => {
   // Create File / Path
@@ -79,7 +79,7 @@ main().then((val) => console.log(val));
 ### Structs Helpers
 
 ```ts
-import structs from "ts-methods/dist/structs";
+import structs from "ts-methods/structs";
 
 const main = async () => {
   // Priority Queue
@@ -146,7 +146,7 @@ import {
   safeExecute,
   uname,
   unameExecute,
-} from "ts-methods/dist/os";
+} from "ts-methods/os";
 
 const main = async () => {
   // Execute
@@ -165,7 +165,7 @@ main().then((val) => console.log(val));
 ### REPL Helpers
 
 ```ts
-import { readLine, readLineSelect, REPL } from "ts-methods/dist/repl";
+import { readLine, readLineSelect, REPL } from "ts-methods/repl";
 
 class Chat extends REPL {
   constructor() {
@@ -195,7 +195,7 @@ main().then((val) => console.log(val));
 ### Github Helpers
 
 ```ts
-import { GithubREPL, gitRepoUrlAdd, cloneAll } from "ts-methods/dist/github";
+import { GithubREPL, gitRepoUrlAdd, cloneAll } from "ts-methods/github";
 
 const main = async () => {
   await gitRepoUrlAdd();
@@ -211,5 +211,5 @@ main().then((val) => console.log(val));
 ```sh
 # Add "types/global.d.ts" to the (include array in tsconfig.json)
 rm -rf types && mkdir types
-cp -r node_modules/ts-methods/dist/global.d.ts types/global.d.ts
+cp -r node_modules/ts-methods/global.d.ts types/global.d.ts
 ```

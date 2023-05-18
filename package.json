@@ -10,7 +10,9 @@
     "testing tools"
   ],
   "files": [
-    "dist/*"
+    "dist/**.d.ts",
+    "dist/**.js",
+    "dist/**.js.map"
   ],
   "author": "Jonathan Chow",
   "license": "ISC",

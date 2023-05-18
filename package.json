@@ -1,6 +1,6 @@
 {
   "name": "ts-methods",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "",
   "main": "dist/index.js",
   "keywords": [
@@ -10,9 +10,7 @@
     "testing tools"
   ],
   "files": [
-    "dist/**.d.ts",
-    "dist/**.js",
-    "dist/**.js.map"
+    "dist/*"
   ],
   "author": "Jonathan Chow",
   "license": "ISC",
@@ -26,6 +24,7 @@
     "build": "chmod +x ./shell/build.sh && ./shell/build.sh",
     "docs": "chmod +x ./shell/docs.sh && ./shell/docs.sh",
     "version": "chmod +x ./shell/version.sh && ./shell/version.sh",
+    "pubtest": "npm publish --dry-run",
     "push": "chmod +x ./shell/push.sh && ./shell/push.sh",
     "lint": "eslint .",
     "prettier": "prettier --write --ignore-unknown **/*",

@@ -16,6 +16,7 @@
 
 ### Functions
 
+- [createIfNotExist](fs.md#createifnotexist)
 - [flatten](fs.md#flatten)
 - [pathCreate](fs.md#pathcreate)
 - [pathExists](fs.md#pathexists)
@@ -46,7 +47,7 @@
 
 #### Defined in
 
-[src/fs.ts:6](https://github.com/jonathanchowjh/ts-utils/blob/442e9ac/src/fs.ts#L6)
+[src/fs.ts:6](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/fs.ts#L6)
 
 ---
 
@@ -56,7 +57,7 @@
 
 #### Defined in
 
-[src/fs.ts:7](https://github.com/jonathanchowjh/ts-utils/blob/442e9ac/src/fs.ts#L7)
+[src/fs.ts:7](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/fs.ts#L7)
 
 ---
 
@@ -70,7 +71,7 @@
 
 #### Defined in
 
-[src/fs.ts:8](https://github.com/jonathanchowjh/ts-utils/blob/442e9ac/src/fs.ts#L8)
+[src/fs.ts:8](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/fs.ts#L8)
 
 ## Variables
 
@@ -80,9 +81,33 @@
 
 #### Defined in
 
-[src/fs.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/442e9ac/src/fs.ts#L5)
+[src/fs.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/fs.ts#L5)
 
 ## Functions
+
+### createIfNotExist
+
+▸ **createIfNotExist**(`fullLoc`): `Promise`<`void`\>
+
+======================================
+Create / Search Path
+======================================
+
+#### Parameters
+
+| Name      | Type     |
+| :-------- | :------- |
+| `fullLoc` | `string` |
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Defined in
+
+[src/fs.ts:154](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/fs.ts#L154)
+
+---
 
 ### flatten
 
@@ -106,7 +131,7 @@
 
 #### Defined in
 
-[src/fs.ts:196](https://github.com/jonathanchowjh/ts-utils/blob/442e9ac/src/fs.ts#L196)
+[src/fs.ts:229](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/fs.ts#L229)
 
 ---
 
@@ -127,7 +152,7 @@
 
 #### Defined in
 
-[src/fs.ts:129](https://github.com/jonathanchowjh/ts-utils/blob/442e9ac/src/fs.ts#L129)
+[src/fs.ts:162](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/fs.ts#L162)
 
 ---
 
@@ -147,7 +172,7 @@
 
 #### Defined in
 
-[src/fs.ts:144](https://github.com/jonathanchowjh/ts-utils/blob/442e9ac/src/fs.ts#L144)
+[src/fs.ts:177](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/fs.ts#L177)
 
 ---
 
@@ -168,7 +193,7 @@
 
 #### Defined in
 
-[src/fs.ts:185](https://github.com/jonathanchowjh/ts-utils/blob/442e9ac/src/fs.ts#L185)
+[src/fs.ts:218](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/fs.ts#L218)
 
 ---
 
@@ -196,7 +221,7 @@
 
 #### Defined in
 
-[src/fs.ts:157](https://github.com/jonathanchowjh/ts-utils/blob/442e9ac/src/fs.ts#L157)
+[src/fs.ts:190](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/fs.ts#L190)
 
 ---
 
@@ -216,7 +241,7 @@
 
 #### Defined in
 
-[src/fs.ts:80](https://github.com/jonathanchowjh/ts-utils/blob/442e9ac/src/fs.ts#L80)
+[src/fs.ts:93](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/fs.ts#L93)
 
 ---
 
@@ -242,7 +267,7 @@
 
 #### Defined in
 
-[src/fs.ts:54](https://github.com/jonathanchowjh/ts-utils/blob/442e9ac/src/fs.ts#L54)
+[src/fs.ts:67](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/fs.ts#L67)
 
 ---
 
@@ -264,13 +289,17 @@
 
 #### Defined in
 
-[src/fs.ts:17](https://github.com/jonathanchowjh/ts-utils/blob/442e9ac/src/fs.ts#L17)
+[src/fs.ts:30](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/fs.ts#L30)
 
 ---
 
 ### root
 
 ▸ **root**(`loc`): `Promise`<`string`\>
+
+======================================
+Root Search
+======================================
 
 #### Parameters
 
@@ -284,7 +313,7 @@
 
 #### Defined in
 
-[src/fs.ts:106](https://github.com/jonathanchowjh/ts-utils/blob/442e9ac/src/fs.ts#L106)
+[src/fs.ts:125](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/fs.ts#L125)
 
 ---
 
@@ -298,7 +327,7 @@
 
 #### Defined in
 
-[src/fs.ts:110](https://github.com/jonathanchowjh/ts-utils/blob/442e9ac/src/fs.ts#L110)
+[src/fs.ts:129](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/fs.ts#L129)
 
 ---
 
@@ -312,7 +341,7 @@
 
 #### Defined in
 
-[src/fs.ts:116](https://github.com/jonathanchowjh/ts-utils/blob/442e9ac/src/fs.ts#L116)
+[src/fs.ts:135](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/fs.ts#L135)
 
 ---
 
@@ -332,7 +361,7 @@
 
 #### Defined in
 
-[src/fs.ts:199](https://github.com/jonathanchowjh/ts-utils/blob/442e9ac/src/fs.ts#L199)
+[src/fs.ts:232](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/fs.ts#L232)
 
 ---
 
@@ -353,7 +382,7 @@
 
 #### Defined in
 
-[src/fs.ts:93](https://github.com/jonathanchowjh/ts-utils/blob/442e9ac/src/fs.ts#L93)
+[src/fs.ts:106](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/fs.ts#L106)
 
 ---
 
@@ -380,7 +409,7 @@
 
 #### Defined in
 
-[src/fs.ts:68](https://github.com/jonathanchowjh/ts-utils/blob/442e9ac/src/fs.ts#L68)
+[src/fs.ts:81](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/fs.ts#L81)
 
 ---
 
@@ -395,7 +424,7 @@
 | `fullLoc` | `string` |
 | `key1`    | `string` |
 | `key2`    | `string` |
-| `value`   | `string` |
+| `value`   | `any`    |
 
 #### Returns
 
@@ -403,4 +432,4 @@
 
 #### Defined in
 
-[src/fs.ts:34](https://github.com/jonathanchowjh/ts-utils/blob/442e9ac/src/fs.ts#L34)
+[src/fs.ts:47](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/fs.ts#L47)

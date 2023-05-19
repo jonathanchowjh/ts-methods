@@ -47,8 +47,7 @@ main().then((val) => console.log(val));
 ```ts
 import {
   CONSTANTS,
-  pathExists,
-  pathCreate,
+  createIfNotExist,
   root,
   writeJson2D,
   readJson2D,
@@ -56,9 +55,7 @@ import {
 
 const main = async () => {
   // Create File / Path
-  if (!(await pathExists(await root(CONSTANTS)))) {
-    await pathCreate(await root(CONSTANTS), true);
-  }
+  await createIfNotExist(await root(CONSTANTS));
   // 2D JSON
   const written2 = await writeJson2D(
     await root(CONSTANTS),

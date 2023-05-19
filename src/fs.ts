@@ -13,6 +13,19 @@ export type NestedObject = {
     | number;
 };
 
+/**
+ * ======================================
+ * Read / Write File
+ * ======================================
+ */
+
+/* eslint-disable no-extend-native */
+/* eslint-disable func-names */
+// @ts-expect-error
+BigInt.prototype.toJSON = function () {
+  return this.toString();
+};
+
 // Usage: await readJson2D(await root("constants.json"), "key1", "key2") => "value"
 export const readJson2D = async (
   fullLoc: string,
@@ -35,7 +48,7 @@ export const writeJson2D = async (
   fullLoc: string,
   key1: string,
   key2: string,
-  value: string
+  value: any
 ): Promise<boolean> => {
   if (!(await pathExists(fullLoc))) throw new UtilsError("Invalid Path");
   let object = await readJson2D(fullLoc, undefined, undefined);
@@ -102,6 +115,12 @@ export const write = async (
   return true;
 };
 
+/**
+ * ======================================
+ * Root Search
+ * ======================================
+ */
+
 // Usage: await root("constants.json") => string
 export const root = async (loc: string) =>
   path.resolve(await rootDefault(), loc);
@@ -123,6 +142,20 @@ export const rootFromPath = async (): Promise<string> => {
   if (iter == null && typeof iter == "object")
     throw new UtilsError("Unexpected null returned");
   return iter;
+};
+
+/**
+ * ======================================
+ * Create / Search Path
+ * ======================================
+ */
+
+// Usage: await createIfNotExist(await root("constants.json"))
+export const createIfNotExist = async (fullLoc: string): Promise<void> => {
+  if (!(await pathExists(fullLoc))) {
+    await pathCreate(fullLoc, true);
+    await writeJson(fullLoc, {});
+  }
 };
 
 // Usage: await pathCreate(await root("constants.json"), true)

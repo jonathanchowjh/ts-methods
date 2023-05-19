@@ -24,4 +24,4 @@
 
 #### Defined in
 
-[src/structs.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/structs.ts#L5)
+[src/structs.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/structs.ts#L5)

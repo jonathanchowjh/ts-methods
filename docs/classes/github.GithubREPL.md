@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[src/github.ts:23](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/github.ts#L23)
+[src/github.ts:23](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/github.ts#L23)
 
 ## Methods
 
@@ -36,4 +36,4 @@
 
 #### Defined in
 
-[src/github.ts:27](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/github.ts#L27)
+[src/github.ts:27](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/github.ts#L27)

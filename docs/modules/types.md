@@ -41,7 +41,7 @@
 
 #### Defined in
 
-[src/types.ts:24](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/types.ts#L24)
+[src/types.ts:24](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/types.ts#L24)
 
 ---
 
@@ -57,7 +57,7 @@
 
 #### Defined in
 
-[src/types.ts:19](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/types.ts#L19)
+[src/types.ts:19](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/types.ts#L19)
 
 ---
 
@@ -74,7 +74,7 @@
 
 #### Defined in
 
-[src/types.ts:9](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/types.ts#L9)
+[src/types.ts:9](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/types.ts#L9)
 
 ---
 
@@ -90,7 +90,7 @@
 
 #### Defined in
 
-[src/types.ts:3](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/types.ts#L3)
+[src/types.ts:3](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/types.ts#L3)
 
 ---
 
@@ -107,7 +107,7 @@
 
 #### Defined in
 
-[src/types.ts:26](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/types.ts#L26)
+[src/types.ts:26](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/types.ts#L26)
 
 ---
 
@@ -123,7 +123,7 @@
 
 #### Defined in
 
-[src/types.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/types.ts#L5)
+[src/types.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/types.ts#L5)
 
 ---
 
@@ -139,7 +139,7 @@
 
 #### Defined in
 
-[src/types.ts:4](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/types.ts#L4)
+[src/types.ts:4](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/types.ts#L4)
 
 ---
 
@@ -156,7 +156,7 @@
 
 #### Defined in
 
-[src/types.ts:29](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/types.ts#L29)
+[src/types.ts:29](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/types.ts#L29)
 
 ---
 
@@ -172,7 +172,7 @@
 
 #### Defined in
 
-[src/types.ts:16](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/types.ts#L16)
+[src/types.ts:16](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/types.ts#L16)
 
 ---
 
@@ -188,7 +188,7 @@
 
 #### Defined in
 
-[src/types.ts:7](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/types.ts#L7)
+[src/types.ts:7](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/types.ts#L7)
 
 ---
 
@@ -204,7 +204,7 @@
 
 #### Defined in
 
-[src/types.ts:6](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/types.ts#L6)
+[src/types.ts:6](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/types.ts#L6)
 
 ---
 
@@ -220,7 +220,7 @@
 
 #### Defined in
 
-[src/types.ts:20](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/types.ts#L20)
+[src/types.ts:20](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/types.ts#L20)
 
 ---
 
@@ -236,7 +236,7 @@
 
 #### Defined in
 
-[src/types.ts:17](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/types.ts#L17)
+[src/types.ts:17](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/types.ts#L17)
 
 ---
 
@@ -253,7 +253,7 @@
 
 #### Defined in
 
-[src/types.ts:14](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/types.ts#L14)
+[src/types.ts:14](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/types.ts#L14)
 
 ---
 
@@ -269,7 +269,7 @@
 
 #### Defined in
 
-[src/types.ts:34](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/types.ts#L34)
+[src/types.ts:34](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/types.ts#L34)
 
 ## Functions
 
@@ -289,4 +289,4 @@
 
 #### Defined in
 
-[src/types.ts:40](https://github.com/jonathanchowjh/ts-utils/blob/5cb79db/src/types.ts#L40)
+[src/types.ts:40](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/types.ts#L40)

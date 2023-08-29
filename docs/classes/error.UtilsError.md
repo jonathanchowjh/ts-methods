@@ -1,4 +1,4 @@
-[ts-methods](../README.md) / [Modules](../modules.md) / [error](../modules/error.md) / UtilsError
+[ts-tools](../README.md) / [Modules](../modules.md) / [error](../modules/error.md) / UtilsError
 
 # Class: UtilsError
 
@@ -48,7 +48,7 @@ Error.constructor
 
 #### Defined in
 
-[src/error.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/error.ts#L5)
+[src/error.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/792472b/src/error.ts#L5)
 
 ## Properties
 

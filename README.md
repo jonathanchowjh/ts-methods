@@ -219,6 +219,7 @@ cp -r node_modules/ts-methods/dist/global.d.ts types/global.d.ts
 - Struct functions for Stack, Graph (improve Priority Queue)
 - OS functions add cronjobs
 - FS functions add csv
+- https://www.npmjs.com/package/fs-extra
 
 ## Dev Ops
 

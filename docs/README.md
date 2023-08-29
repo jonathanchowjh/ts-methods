@@ -1,4 +1,4 @@
-ts-methods / [Modules](modules.md)
+ts-tools / [Modules](modules.md)
 
 # ts-methods
 
@@ -212,3 +212,18 @@ main().then((val) => console.log(val));
 rm -rf types && mkdir types
 cp -r node_modules/ts-methods/dist/global.d.ts types/global.d.ts
 ```
+
+## Future Expansion
+
+- Net functions for tcp, http, https, udp, http/3.0, sniffer
+- Math functions for array manipulations, to graph
+- Util functions for array manipulations for type helpers (eg. Pick)
+- Struct functions for Stack, Graph (improve Priority Queue)
+- OS functions add cronjobs
+- FS functions add csv
+- https://www.npmjs.com/package/fs-extra
+
+## Dev Ops
+
+- AWS functions for EC2, S3
+- Docker functions for DBs, cache, jenkins, node, kubernetes

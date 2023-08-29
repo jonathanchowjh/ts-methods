@@ -1,4 +1,4 @@
-[ts-methods](../README.md) / [Modules](../modules.md) / structs
+[ts-tools](../README.md) / [Modules](../modules.md) / structs
 
 # Module: structs
 
@@ -24,4 +24,4 @@
 
 #### Defined in
 
-[src/structs.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/747c1de/src/structs.ts#L5)
+[src/structs.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/792472b/src/structs.ts#L5)

@@ -1,6 +1,6 @@
-[ts-methods](README.md) / Modules
+[ts-tools](README.md) / Modules
 
-# ts-methods
+# ts-tools
 
 ## Table of contents
 

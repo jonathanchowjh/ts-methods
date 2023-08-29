@@ -1,6 +1,6 @@
-[ts-tools](README.md) / Modules
+[typescript-tools](README.md) / Modules
 
-# ts-tools
+# typescript-tools
 
 ## Table of contents
 

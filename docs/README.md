@@ -1,4 +1,4 @@
-typescript-tools / [Modules](modules.md)
+fs-tools / [Modules](modules.md)
 
 # ts-methods
 

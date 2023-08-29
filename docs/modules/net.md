@@ -1,4 +1,4 @@
-[typescript-tools](../README.md) / [Modules](../modules.md) / net
+[fs-tools](../README.md) / [Modules](../modules.md) / net
 
 # Module: net
 
@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[src/net.ts:42](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/net.ts#L42)
+[src/net.ts:42](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/net.ts#L42)
 
 ---
 
@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[src/net.ts:22](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/net.ts#L22)
+[src/net.ts:22](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/net.ts#L22)
 
 ---
 
@@ -50,4 +50,4 @@
 
 #### Defined in
 
-[src/net.ts:12](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/net.ts#L12)
+[src/net.ts:12](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/net.ts#L12)

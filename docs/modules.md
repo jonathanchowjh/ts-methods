@@ -1,6 +1,6 @@
-[typescript-tools](README.md) / Modules
+[fs-tools](README.md) / Modules
 
-# typescript-tools
+# fs-tools
 
 ## Table of contents
 

@@ -1,4 +1,4 @@
-[typescript-tools](../README.md) / [Modules](../modules.md) / fs
+[fs-tools](../README.md) / [Modules](../modules.md) / fs
 
 # Module: fs
 
@@ -47,7 +47,7 @@
 
 #### Defined in
 
-[src/fs.ts:6](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/fs.ts#L6)
+[src/fs.ts:6](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/fs.ts#L6)
 
 ---
 
@@ -57,7 +57,7 @@
 
 #### Defined in
 
-[src/fs.ts:7](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/fs.ts#L7)
+[src/fs.ts:7](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/fs.ts#L7)
 
 ---
 
@@ -71,7 +71,7 @@
 
 #### Defined in
 
-[src/fs.ts:8](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/fs.ts#L8)
+[src/fs.ts:8](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/fs.ts#L8)
 
 ## Variables
 
@@ -81,7 +81,7 @@
 
 #### Defined in
 
-[src/fs.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/fs.ts#L5)
+[src/fs.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/fs.ts#L5)
 
 ## Functions
 
@@ -105,7 +105,7 @@ Create / Search Path
 
 #### Defined in
 
-[src/fs.ts:154](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/fs.ts#L154)
+[src/fs.ts:154](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/fs.ts#L154)
 
 ---
 
@@ -131,7 +131,7 @@ Create / Search Path
 
 #### Defined in
 
-[src/fs.ts:229](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/fs.ts#L229)
+[src/fs.ts:229](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/fs.ts#L229)
 
 ---
 
@@ -152,7 +152,7 @@ Create / Search Path
 
 #### Defined in
 
-[src/fs.ts:162](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/fs.ts#L162)
+[src/fs.ts:162](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/fs.ts#L162)
 
 ---
 
@@ -172,7 +172,7 @@ Create / Search Path
 
 #### Defined in
 
-[src/fs.ts:177](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/fs.ts#L177)
+[src/fs.ts:177](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/fs.ts#L177)
 
 ---
 
@@ -193,7 +193,7 @@ Create / Search Path
 
 #### Defined in
 
-[src/fs.ts:218](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/fs.ts#L218)
+[src/fs.ts:218](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/fs.ts#L218)
 
 ---
 
@@ -221,7 +221,7 @@ Create / Search Path
 
 #### Defined in
 
-[src/fs.ts:190](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/fs.ts#L190)
+[src/fs.ts:190](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/fs.ts#L190)
 
 ---
 
@@ -241,7 +241,7 @@ Create / Search Path
 
 #### Defined in
 
-[src/fs.ts:93](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/fs.ts#L93)
+[src/fs.ts:93](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/fs.ts#L93)
 
 ---
 
@@ -267,7 +267,7 @@ Create / Search Path
 
 #### Defined in
 
-[src/fs.ts:67](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/fs.ts#L67)
+[src/fs.ts:67](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/fs.ts#L67)
 
 ---
 
@@ -289,7 +289,7 @@ Create / Search Path
 
 #### Defined in
 
-[src/fs.ts:30](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/fs.ts#L30)
+[src/fs.ts:30](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/fs.ts#L30)
 
 ---
 
@@ -313,7 +313,7 @@ Root Search
 
 #### Defined in
 
-[src/fs.ts:125](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/fs.ts#L125)
+[src/fs.ts:125](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/fs.ts#L125)
 
 ---
 
@@ -327,7 +327,7 @@ Root Search
 
 #### Defined in
 
-[src/fs.ts:129](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/fs.ts#L129)
+[src/fs.ts:129](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/fs.ts#L129)
 
 ---
 
@@ -341,7 +341,7 @@ Root Search
 
 #### Defined in
 
-[src/fs.ts:135](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/fs.ts#L135)
+[src/fs.ts:135](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/fs.ts#L135)
 
 ---
 
@@ -361,7 +361,7 @@ Root Search
 
 #### Defined in
 
-[src/fs.ts:232](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/fs.ts#L232)
+[src/fs.ts:232](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/fs.ts#L232)
 
 ---
 
@@ -382,7 +382,7 @@ Root Search
 
 #### Defined in
 
-[src/fs.ts:106](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/fs.ts#L106)
+[src/fs.ts:106](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/fs.ts#L106)
 
 ---
 
@@ -409,7 +409,7 @@ Root Search
 
 #### Defined in
 
-[src/fs.ts:81](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/fs.ts#L81)
+[src/fs.ts:81](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/fs.ts#L81)
 
 ---
 
@@ -432,4 +432,4 @@ Root Search
 
 #### Defined in
 
-[src/fs.ts:47](https://github.com/jonathanchowjh/ts-utils/blob/9c0d20c/src/fs.ts#L47)
+[src/fs.ts:47](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/fs.ts#L47)

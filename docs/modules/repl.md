@@ -1,4 +1,4 @@
-[ts-github](../README.md) / [Modules](../modules.md) / repl
+[ts-fractal](../README.md) / [Modules](../modules.md) / repl
 
 # Module: repl
 
@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[src/repl.ts:26](https://github.com/jonathanchowjh/ts-utils/blob/b98ab75/src/repl.ts#L26)
+[src/repl.ts:26](https://github.com/jonathanchowjh/ts-utils/blob/3fa4432/src/repl.ts#L26)
 
 ---
 
@@ -52,4 +52,4 @@
 
 #### Defined in
 
-[src/repl.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/b98ab75/src/repl.ts#L5)
+[src/repl.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/3fa4432/src/repl.ts#L5)

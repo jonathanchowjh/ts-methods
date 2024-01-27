@@ -1,4 +1,4 @@
-[ts-github](../README.md) / [Modules](../modules.md) / [repl](../modules/repl.md) / REPL
+[ts-fractal](../README.md) / [Modules](../modules.md) / [repl](../modules/repl.md) / REPL
 
 # Class: REPL
 
@@ -55,7 +55,7 @@ new Chat()
 
 #### Defined in
 
-[src/repl.ts:65](https://github.com/jonathanchowjh/ts-utils/blob/b98ab75/src/repl.ts#L65)
+[src/repl.ts:65](https://github.com/jonathanchowjh/ts-utils/blob/3fa4432/src/repl.ts#L65)
 
 ## Properties
 
@@ -65,7 +65,7 @@ new Chat()
 
 #### Defined in
 
-[src/repl.ts:63](https://github.com/jonathanchowjh/ts-utils/blob/b98ab75/src/repl.ts#L63)
+[src/repl.ts:63](https://github.com/jonathanchowjh/ts-utils/blob/3fa4432/src/repl.ts#L63)
 
 ---
 
@@ -75,7 +75,7 @@ new Chat()
 
 #### Defined in
 
-[src/repl.ts:61](https://github.com/jonathanchowjh/ts-utils/blob/b98ab75/src/repl.ts#L61)
+[src/repl.ts:61](https://github.com/jonathanchowjh/ts-utils/blob/3fa4432/src/repl.ts#L61)
 
 ## Methods
 
@@ -95,7 +95,7 @@ new Chat()
 
 #### Defined in
 
-[src/repl.ts:99](https://github.com/jonathanchowjh/ts-utils/blob/b98ab75/src/repl.ts#L99)
+[src/repl.ts:99](https://github.com/jonathanchowjh/ts-utils/blob/3fa4432/src/repl.ts#L99)
 
 ---
 
@@ -109,4 +109,4 @@ new Chat()
 
 #### Defined in
 
-[src/repl.ts:71](https://github.com/jonathanchowjh/ts-utils/blob/b98ab75/src/repl.ts#L71)
+[src/repl.ts:71](https://github.com/jonathanchowjh/ts-utils/blob/3fa4432/src/repl.ts#L71)

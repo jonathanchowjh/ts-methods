@@ -1,4 +1,4 @@
-ts-github / [Modules](modules.md)
+ts-fractal / [Modules](modules.md)
 
 # ts-methods
 

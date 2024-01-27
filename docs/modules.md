@@ -1,6 +1,6 @@
-[ts-github](README.md) / Modules
+[ts-fractal](README.md) / Modules
 
-# ts-github
+# ts-fractal
 
 ## Table of contents
 

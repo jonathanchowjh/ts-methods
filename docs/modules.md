@@ -1,6 +1,6 @@
-[ts-files](README.md) / Modules
+[ts-ethers](README.md) / Modules
 
-# ts-files
+# ts-ethers
 
 ## Table of contents
 

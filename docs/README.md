@@ -1,4 +1,4 @@
-ts-files / [Modules](modules.md)
+ts-ethers / [Modules](modules.md)
 
 # ts-methods
 

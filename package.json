@@ -1,6 +1,6 @@
 {
-  "name": "ts-files",
-  "version": "1.0.17",
+  "name": "ts-ethers",
+  "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "keywords": [

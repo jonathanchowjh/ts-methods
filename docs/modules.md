@@ -1,6 +1,6 @@
-[ts-radio](README.md) / Modules
+[ts-github](README.md) / Modules
 
-# ts-radio
+# ts-github
 
 ## Table of contents
 

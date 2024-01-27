@@ -1,4 +1,4 @@
-[ts-radio](../README.md) / [Modules](../modules.md) / structs
+[ts-github](../README.md) / [Modules](../modules.md) / structs
 
 # Module: structs
 
@@ -24,4 +24,4 @@
 
 #### Defined in
 
-[src/structs.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/1fc4467/src/structs.ts#L5)
+[src/structs.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/b98ab75/src/structs.ts#L5)

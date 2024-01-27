@@ -1,4 +1,4 @@
-[ts-radio](../README.md) / [Modules](../modules.md) / [error](../modules/error.md) / DefaultError
+[ts-github](../README.md) / [Modules](../modules.md) / [error](../modules/error.md) / DefaultError
 
 # Class: DefaultError
 
@@ -47,7 +47,7 @@ Error.constructor
 
 #### Defined in
 
-[src/error.ts:14](https://github.com/jonathanchowjh/ts-utils/blob/1fc4467/src/error.ts#L14)
+[src/error.ts:14](https://github.com/jonathanchowjh/ts-utils/blob/b98ab75/src/error.ts#L14)
 
 ## Properties
 

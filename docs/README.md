@@ -1,4 +1,4 @@
-ts-radio / [Modules](modules.md)
+ts-github / [Modules](modules.md)
 
 # ts-methods
 

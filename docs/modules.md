@@ -1,6 +1,6 @@
-[fs-tools](README.md) / Modules
+[ts-files](README.md) / Modules
 
-# fs-tools
+# ts-files
 
 ## Table of contents
 

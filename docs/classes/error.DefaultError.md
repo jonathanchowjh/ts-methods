@@ -1,4 +1,4 @@
-[fs-tools](../README.md) / [Modules](../modules.md) / [error](../modules/error.md) / DefaultError
+[ts-files](../README.md) / [Modules](../modules.md) / [error](../modules/error.md) / DefaultError
 
 # Class: DefaultError
 
@@ -47,7 +47,7 @@ Error.constructor
 
 #### Defined in
 
-[src/error.ts:14](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/error.ts#L14)
+[src/error.ts:14](https://github.com/jonathanchowjh/ts-utils/blob/78fc3fb/src/error.ts#L14)
 
 ## Properties
 

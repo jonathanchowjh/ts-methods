@@ -1,4 +1,4 @@
-[fs-tools](../README.md) / [Modules](../modules.md) / [github](../modules/github.md) / GithubREPL
+[ts-files](../README.md) / [Modules](../modules.md) / [github](../modules/github.md) / GithubREPL
 
 # Class: GithubREPL
 
@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[src/github.ts:23](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/github.ts#L23)
+[src/github.ts:23](https://github.com/jonathanchowjh/ts-utils/blob/78fc3fb/src/github.ts#L23)
 
 ## Methods
 
@@ -36,4 +36,4 @@
 
 #### Defined in
 
-[src/github.ts:27](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/github.ts#L27)
+[src/github.ts:27](https://github.com/jonathanchowjh/ts-utils/blob/78fc3fb/src/github.ts#L27)

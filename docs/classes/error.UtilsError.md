@@ -1,4 +1,4 @@
-[fs-tools](../README.md) / [Modules](../modules.md) / [error](../modules/error.md) / UtilsError
+[ts-files](../README.md) / [Modules](../modules.md) / [error](../modules/error.md) / UtilsError
 
 # Class: UtilsError
 
@@ -48,7 +48,7 @@ Error.constructor
 
 #### Defined in
 
-[src/error.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/39d9b52/src/error.ts#L5)
+[src/error.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/78fc3fb/src/error.ts#L5)
 
 ## Properties
 

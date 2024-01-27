@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[src/repl.ts:26](https://github.com/jonathanchowjh/ts-utils/blob/78fc3fb/src/repl.ts#L26)
+[src/repl.ts:26](https://github.com/jonathanchowjh/ts-utils/blob/3b2a65c/src/repl.ts#L26)
 
 ---
 
@@ -52,4 +52,4 @@
 
 #### Defined in
 
-[src/repl.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/78fc3fb/src/repl.ts#L5)
+[src/repl.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/3b2a65c/src/repl.ts#L5)

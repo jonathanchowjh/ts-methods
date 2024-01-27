@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[src/net.ts:42](https://github.com/jonathanchowjh/ts-utils/blob/78fc3fb/src/net.ts#L42)
+[src/net.ts:42](https://github.com/jonathanchowjh/ts-utils/blob/3b2a65c/src/net.ts#L42)
 
 ---
 
@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[src/net.ts:22](https://github.com/jonathanchowjh/ts-utils/blob/78fc3fb/src/net.ts#L22)
+[src/net.ts:22](https://github.com/jonathanchowjh/ts-utils/blob/3b2a65c/src/net.ts#L22)
 
 ---
 
@@ -50,4 +50,4 @@
 
 #### Defined in
 
-[src/net.ts:12](https://github.com/jonathanchowjh/ts-utils/blob/78fc3fb/src/net.ts#L12)
+[src/net.ts:12](https://github.com/jonathanchowjh/ts-utils/blob/3b2a65c/src/net.ts#L12)

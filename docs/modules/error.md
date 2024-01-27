@@ -1,4 +1,4 @@
-[ts-ethers](../README.md) / [Modules](../modules.md) / error
+[ts-radio](../README.md) / [Modules](../modules.md) / error
 
 # Module: error
 
@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[src/error.ts:47](https://github.com/jonathanchowjh/ts-utils/blob/bca7b1f/src/error.ts#L47)
+[src/error.ts:47](https://github.com/jonathanchowjh/ts-utils/blob/1fc4467/src/error.ts#L47)
 
 ---
 
@@ -62,7 +62,7 @@ error is Error
 
 #### Defined in
 
-[src/error.ts:75](https://github.com/jonathanchowjh/ts-utils/blob/bca7b1f/src/error.ts#L75)
+[src/error.ts:75](https://github.com/jonathanchowjh/ts-utils/blob/1fc4467/src/error.ts#L75)
 
 ---
 
@@ -82,7 +82,7 @@ error is Error
 
 #### Defined in
 
-[src/error.ts:71](https://github.com/jonathanchowjh/ts-utils/blob/bca7b1f/src/error.ts#L71)
+[src/error.ts:71](https://github.com/jonathanchowjh/ts-utils/blob/1fc4467/src/error.ts#L71)
 
 ---
 
@@ -104,7 +104,7 @@ error is Error
 
 #### Defined in
 
-[src/error.ts:21](https://github.com/jonathanchowjh/ts-utils/blob/bca7b1f/src/error.ts#L21)
+[src/error.ts:21](https://github.com/jonathanchowjh/ts-utils/blob/1fc4467/src/error.ts#L21)
 
 ---
 
@@ -124,4 +124,4 @@ error is Error
 
 #### Defined in
 
-[src/error.ts:82](https://github.com/jonathanchowjh/ts-utils/blob/bca7b1f/src/error.ts#L82)
+[src/error.ts:82](https://github.com/jonathanchowjh/ts-utils/blob/1fc4467/src/error.ts#L82)

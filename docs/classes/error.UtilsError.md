@@ -1,4 +1,4 @@
-[ts-ethers](../README.md) / [Modules](../modules.md) / [error](../modules/error.md) / UtilsError
+[ts-radio](../README.md) / [Modules](../modules.md) / [error](../modules/error.md) / UtilsError
 
 # Class: UtilsError
 
@@ -48,7 +48,7 @@ Error.constructor
 
 #### Defined in
 
-[src/error.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/bca7b1f/src/error.ts#L5)
+[src/error.ts:5](https://github.com/jonathanchowjh/ts-utils/blob/1fc4467/src/error.ts#L5)
 
 ## Properties
 

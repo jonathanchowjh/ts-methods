@@ -1,4 +1,4 @@
-[ts-ethers](../README.md) / [Modules](../modules.md) / [github](../modules/github.md) / GithubREPL
+[ts-radio](../README.md) / [Modules](../modules.md) / [github](../modules/github.md) / GithubREPL
 
 # Class: GithubREPL
 
@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[src/github.ts:23](https://github.com/jonathanchowjh/ts-utils/blob/bca7b1f/src/github.ts#L23)
+[src/github.ts:23](https://github.com/jonathanchowjh/ts-utils/blob/1fc4467/src/github.ts#L23)
 
 ## Methods
 
@@ -36,4 +36,4 @@
 
 #### Defined in
 
-[src/github.ts:27](https://github.com/jonathanchowjh/ts-utils/blob/bca7b1f/src/github.ts#L27)
+[src/github.ts:27](https://github.com/jonathanchowjh/ts-utils/blob/1fc4467/src/github.ts#L27)

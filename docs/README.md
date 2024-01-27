@@ -1,4 +1,4 @@
-ts-ethers / [Modules](modules.md)
+ts-radio / [Modules](modules.md)
 
 # ts-methods
 

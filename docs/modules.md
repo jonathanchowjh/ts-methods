@@ -1,6 +1,6 @@
-[ts-ethers](README.md) / Modules
+[ts-radio](README.md) / Modules
 
-# ts-ethers
+# ts-radio
 
 ## Table of contents
 
